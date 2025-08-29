@@ -27,17 +27,17 @@ export const metadata: Metadata = {
 export default function SurahRahmanArabicPage() {
   const surahImages = [
     {
-      src: "https://suraherahman.com/suraherahman-1.jpg-PaPItUw7pmFfdZXgNglQSIv1LltPar.jpeg",
+      src: "https://suraherahman.com/suraherahman-1.jpp",
       alt: "Surah Rahman Page 1 - Arabic Text",
       page: 1,
     },
     {
-      src: "https://suraherahman.com/suraherahman-2.jpg-etSzJcsqyUKxNsfBwa6vYJlsgZrSka.jpeg",
+      src: "https://suraherahman.com/suraherahman-2.jpg",
       alt: "Surah Rahman Page 2 - Arabic Text",
       page: 2,
     },
     {
-      src: "https://suraherahman.com/suraherahman-3.jpg-ZPPq6i2RrqskwUjKSJ58OJMmeVYaYj.jpeg",
+      src: "https://suraherahman.com/suraherahman-3.jpg",
       alt: "Surah Rahman Page 3 - Arabic Text",
       page: 3,
     },
