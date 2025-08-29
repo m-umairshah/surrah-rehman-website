@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Listen to Surah Rahman with beautiful recitations by Qari Abdul Basit and Mishari al-Afasi. Read in Arabic, Urdu, and English with translations and benefits.",
   keywords:
-    "surah rahman, quran, islamic, recitation, qari abdul basit, mishari al-afasi, arabic, urdu, english translation",
+    "surah rahman, surah e rahman,surah e rahman by qari abdul basit, surah e rahman by mishari al-afasi, arabic, urdu, english translation",
   generator: "Surah Rahman Website",
   openGraph: {
     title: "Surah Rahman - Complete Quran Chapter with Audio Recitation",
