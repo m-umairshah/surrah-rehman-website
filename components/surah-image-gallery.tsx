@@ -79,44 +79,70 @@ export function SurahImageGallery({ images, title = "Surah Rahman Pages" }: Sura
       </Card>
 
       {/* Navigation Controls */}
-      <div className="flex items-center justify-between">
-        <Button
-          variant="outline"
-          onClick={prevPage}
-          disabled={images.length <= 1}
-          className="flex items-center gap-2 bg-transparent"
-        >
-          <ChevronLeft className="w-4 h-4" />
-          Previous
-        </Button>
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+  {/* Prev */}
+  <Button
+    variant="outline"
+    onClick={prevPage}
+    disabled={currentPage === 0 || images.length <= 1}
+    className="flex items-center gap-2 bg-transparent justify-center w-full sm:w-auto"
+    aria-label="Previous page"
+  >
+    <ChevronLeft className="w-4 h-4" />
+    Previous
+  </Button>
 
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">Go to page:</span>
-          <div className="flex gap-1">
-            {images.map((_, index) => (
-              <Button
-                key={index}
-                variant={index === currentPage ? "default" : "outline"}
-                size="sm"
-                onClick={() => goToPage(index)}
-                className="w-8 h-8 p-0"
-              >
-                {index + 1}
-              </Button>
-            ))}
-          </div>
-        </div>
+  {/* Page controls */}
+  <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 w-full sm:w-auto">
+    <span className="text-sm text-muted-foreground">Go to page:</span>
 
+    {/* Mobile: dropdown */}
+    <div className="sm:hidden w-full">
+      <select
+        className="w-full rounded-md border bg-background px-3 py-2 text-sm"
+        value={currentPage + 1}
+        onChange={(e) => goToPage(Number(e.target.value) - 1)}
+        aria-label="Select page"
+      >
+        {images.map((_, index) => (
+          <option key={index} value={index + 1}>
+            {index + 1}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    {/* Desktop: numbered buttons */}
+    <div className="hidden sm:flex gap-1 overflow-x-auto max-w-[min(70vw,640px)] py-1">
+      {images.map((_, index) => (
         <Button
-          variant="outline"
-          onClick={nextPage}
-          disabled={images.length <= 1}
-          className="flex items-center gap-2 bg-transparent"
+          key={index}
+          variant={index === currentPage ? "default" : "outline"}
+          size="sm"
+          onClick={() => goToPage(index)}
+          className="w-8 h-8 p-0"
+          aria-current={index === currentPage ? "page" : undefined}
+          aria-label={`Go to page ${index + 1}`}
         >
-          Next
-          <ChevronRight className="w-4 h-4" />
+          {index + 1}
         </Button>
-      </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Next */}
+  <Button
+    variant="outline"
+    onClick={nextPage}
+    disabled={currentPage === images.length - 1 || images.length <= 1}
+    className="flex items-center gap-2 bg-transparent justify-center w-full sm:w-auto"
+    aria-label="Next page"
+  >
+    Next
+    <ChevronRight className="w-4 h-4" />
+  </Button>
+</div>
+
 
       {/* Thumbnail Strip */}
       <div className="flex gap-2 overflow-x-auto pb-2">
