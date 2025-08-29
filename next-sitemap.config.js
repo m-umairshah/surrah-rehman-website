@@ -1,26 +1,26 @@
-next-sitemap.config.js// next-sitemap.config.js
+// next-sitemap.config.js
 module.exports = {
-  siteUrl: 'https://suraherahman.com', // your base URL
-  generateRobotsTxt: true, // Optional, to generate robots.txt
+  siteUrl: 'https://suraherahman.com', // your site base URL
+  generateRobotsTxt: true, // Optional, generates robots.txt
   sitemapSize: 7000,
-  changefreq: 'monthly',
-  priority: 0.7,
-  exclude: ['/api/*'], // exclude private API routes if any
+  changefreq: 'monthly', // Default change frequency for pages
+  priority: 0.7, // Default priority for all pages
+  exclude: ['/api/*'], // Optional, exclude routes like APIs
   transform: async (cfg, path) => {
     let priority = 0.7;
     let changefreq = 'monthly';
 
-    // Define custom frequency and priority based on paths
+    // Customize priority and changefreq for specific paths
     if (path === '/') {
       priority = 1.0;
       changefreq = 'weekly';
     }
 
     return {
-      loc: path, // The URL of the page
+      loc: path, // The URL of the page (relative URL)
       changefreq,
       priority,
-      lastmod: new Date().toISOString(), // last modification date
+      lastmod: new Date().toISOString(), // last modified time
     };
-  },
+  }
 };
