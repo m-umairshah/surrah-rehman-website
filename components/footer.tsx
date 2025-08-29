@@ -10,7 +10,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="relative mt-16 bg-sidebar text-sidebar-foreground">
+    <footer className="relative bg-sidebar text-sidebar-foreground">
       {/* subtle gradient glow */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(255,255,255,0.06),transparent)]" />
 
