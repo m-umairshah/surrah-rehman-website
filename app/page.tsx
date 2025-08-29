@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { HomeSeoArticle } from "@/components/home-seo-article"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import dynamic from "next/dynamic"
@@ -21,17 +22,17 @@ const SurahImageGallery = dynamic(
 export default function HomePage() {
   const galleryImages = [
     {
-      src: "https://suraherahman.com/suraherahman-1.jpg-PaPItUw7pmFfdZXgNglQSIv1LltPar.jpeg",
+      src: "https://suraherahman.com/suraherahman-1.jpg",
       alt: "Surah Rahman – Arabic Page 1",
       page: 1,
     },
     {
-      src: "https://suraherahman.com/suraherahman-2.jpg-etSzJcsqyUKxNsfBwa6vYJlsgZrSka.jpeg",
+      src: "https://suraherahman.com/suraherahman-2.jpg",
       alt: "Surah Rahman – Arabic Page 2",
       page: 2,
     },
     {
-      src: "https://suraherahman.com/suraherahman-3.jpg-ZPPq6i2RrqskwUjKSJ58OJMmeVYaYj.jpeg",
+      src: "https://suraherahman.com/suraherahman-3.jpg",
       alt: "Surah Rahman – Arabic Page 3",
       page: 3,
     },
@@ -177,6 +178,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <HomeSeoArticle />
       </main>
 
       <Footer />
