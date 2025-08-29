@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function SurahRahmanArabicPage() {
   const surahImages = [
     {
-      src: "https://suraherahman.com/suraherahman-1.jpp",
+      src: "https://suraherahman.com/suraherahman-1.jpg",
       alt: "Surah Rahman Page 1 - Arabic Text",
       page: 1,
     },
