@@ -36,7 +36,7 @@ export default function SurahRahmanListenOnlinePage() {
                 src="/assets/mp3/suraherahman-qari-basit.mp3"
                 title="Surah Rahman"
                 reciter="Qari Abdul Basit"
-                reciterImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
+                reciterImage="https://suraherahman.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
                 downloadUrl="/assets/mp3/suraherahman-qari-basit.mp3"
               />
 
@@ -44,7 +44,7 @@ export default function SurahRahmanListenOnlinePage() {
                 src="/assets/mp3/Surah-Ar-Rahman-Mishari-Al-afasi.mp3"
                 title="Surah Rahman"
                 reciter="Sheikh Mishari al-Afasi"
-                reciterImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
+                reciterImage="https://suraherahman.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
                 downloadUrl="/assets/mp3/Surah-Ar-Rahman-Mishari-Al-afasi.mp3"
               />
 

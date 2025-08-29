@@ -26,7 +26,7 @@ export default function MishariAlAfasiPage() {
             <div className="text-center mb-12">
               <div className="mb-6">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
+                  src="https://suraherahman.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
                   alt="Sheikh Mishari Rashid al-Afasi"
                   className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-primary/20"
                 />
@@ -42,7 +42,7 @@ export default function MishariAlAfasiPage() {
                 src="/assets/mp3/Surah-Ar-Rahman-Mishari-Al-afasi.mp3"
                 title="Surah Rahman"
                 reciter="Sheikh Mishari Rashid al-Afasi"
-                reciterImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
+                reciterImage="https://suraherahman.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
                 downloadUrl="/assets/mp3/Surah-Ar-Rahman-Mishari-Al-afasi.mp3"
               />
             </div>

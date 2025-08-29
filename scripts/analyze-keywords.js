@@ -2,8 +2,8 @@
 import fs from "fs"
 
 const csvUrls = [
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Free%20Related%20Keywords%20Generator%20-%20No%20Sign-Up%20Needed-9rYzmeE5iOdw9QUPYADHoCndzswvOp.csv",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/google.com-surah%20rahman-RIKEj371HRLtRqE337oQUBdzuRtWRK.csv",
+  "https://suraherahman.com/Free%20Related%20Keywords%20Generator%20-%20No%20Sign-Up%20Needed-9rYzmeE5iOdw9QUPYADHoCndzswvOp.csv",
+  "https://suraherahman.com/google.com-surah%20rahman-RIKEj371HRLtRqE337oQUBdzuRtWRK.csv",
 ]
 
 async function fetchAndAnalyzeKeywords() {

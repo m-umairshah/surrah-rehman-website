@@ -56,7 +56,7 @@ export default function QariAbdulBasitPage() {
             <div className="text-center mb-12">
               <div className="mb-6">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
+                  src="https://suraherahman.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
                   alt="Qari Abdul Basit Abd us-Samad"
                   className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-primary/20"
                 />
@@ -72,7 +72,7 @@ export default function QariAbdulBasitPage() {
                 src="/assets/mp3/suraherahman-qari-basit.mp3"
                 title="Surah Rahman"
                 reciter="Qari Abdul Basit Abd us-Samad"
-                reciterImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
+                reciterImage="https://suraherahman.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
                 downloadUrl="/assets/mp3/suraherahman-qari-basit.mp3"
               />
             </div>
