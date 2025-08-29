@@ -52,7 +52,7 @@ export function SurahImageGallery({ images, title = "Surah Rahman Pages" }: Sura
                   <img
                     src={currentImage?.src || "/placeholder.svg"}
                     alt={currentImage?.alt}
-                    className="w-full h-auto max-h-[600px] object-contain bg-white"
+                    className="w-full h-auto max-h-[800px] object-contain bg-white"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                     <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
