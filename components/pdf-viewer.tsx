@@ -26,32 +26,46 @@ export function PDFViewer({ src, title = "PDF Document", downloadUrl }: PDFViewe
 
   return (
     <Card className="w-full">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
-        <CardTitle className="text-lg">{title}</CardTitle>
-        <div className="flex items-center gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={toggleFullscreen}
-            className="flex items-center gap-2 bg-transparent"
-          >
-            {isFullscreen ? <ZoomOut className="w-4 h-4" /> : <ZoomIn className="w-4 h-4" />}
-            {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
-          </Button>
-          <Button variant="outline" size="sm" onClick={openInNewTab} className="flex items-center gap-2 bg-transparent">
-            <ExternalLink className="w-4 h-4" />
-            Open
-          </Button>
-          {downloadUrl && (
-            <Button variant="outline" size="sm" asChild className="flex items-center gap-2 bg-transparent">
-              <a href={downloadUrl} download>
-                <Download className="w-4 h-4" />
-                Download
-              </a>
-            </Button>
-          )}
-        </div>
-      </CardHeader>
+      <CardHeader className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 space-y-0 pb-4">
+  <CardTitle className="text-base sm:text-lg text-center sm:text-left">{title}</CardTitle>
+  
+  <div className="flex flex-wrap justify-center sm:justify-end items-center gap-2 w-full sm:w-auto">
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={toggleFullscreen}
+      className="flex items-center gap-2 bg-transparent w-full sm:w-auto justify-center"
+    >
+      {isFullscreen ? <ZoomOut className="w-4 h-4" /> : <ZoomIn className="w-4 h-4" />}
+      {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+    </Button>
+
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={openInNewTab}
+      className="flex items-center gap-2 bg-transparent w-full sm:w-auto justify-center"
+    >
+      <ExternalLink className="w-4 h-4" />
+      Open
+    </Button>
+
+    {downloadUrl && (
+      <Button
+        variant="outline"
+        size="sm"
+        asChild
+        className="flex items-center gap-2 bg-transparent w-full sm:w-auto justify-center"
+      >
+        <a href={downloadUrl} download>
+          <Download className="w-4 h-4" />
+          Download
+        </a>
+      </Button>
+    )}
+  </div>
+</CardHeader>
+
       <CardContent className="p-0">
         <div className={`relative ${isFullscreen ? "fixed inset-0 z-50 bg-background p-4" : ""}`}>
           {isFullscreen && (
