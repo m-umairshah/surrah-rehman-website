@@ -57,7 +57,7 @@ export default function SurahRahmanPDFPage() {
             {/* PDF Viewer (responsive wrapper) */}
             <div className="mb-8 sm:mb-10">
               <div className="rounded-lg border bg-background p-2 sm:p-3 md:p-4">
-                <div className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden rounded-md">
+                <div className="w-full overflow-hidden rounded-md">
                   <PDFViewer
                     src="/assets/pdf/suraherahman.pdf"
                     title="Surah Rahman - Complete Chapter 55"
