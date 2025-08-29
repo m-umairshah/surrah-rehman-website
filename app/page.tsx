@@ -108,7 +108,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
+<div className="mb-12">
+              <SurahImageGallery images={surahImages} title="Surah Rahman - Original Arabic Pages" />
+            </div>
         {/* About Section */}
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4">
