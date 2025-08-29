@@ -6,6 +6,7 @@ import "./globals.css"
 import { Analytics } from "@/components/analytics"
 import { StructuredData } from "@/components/structured-data"
 import { Suspense } from "react"
+import Head from "next/head"  // Importing the Head component
 
 export const metadata: Metadata = {
   title: "Surah Rahman - Complete Quran Chapter with Audio Recitation",
@@ -69,6 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Structured Data for SEO */}
         <StructuredData
           type="website"
           data={{
@@ -77,6 +79,20 @@ export default function RootLayout({
             url: "https://suraherahman.com",
           }}
         />
+
+        {/* Google Analytics (gtag.js) */}
+        <Head>
+          {/* Google Tag Manager script */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYE936JLWC"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XYE936JLWC');
+            `}
+          </script>
+        </Head>
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>
