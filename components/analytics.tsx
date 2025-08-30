@@ -23,13 +23,13 @@ export function Analytics() {
   return (
     <>
       {/* Google Analytics */}
-      <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" strategy="afterInteractive" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-XYE936JLWC" strategy="afterInteractive" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'GA_MEASUREMENT_ID', {
+          gtag('config', 'G-XYE936JLWC', {
             page_title: document.title,
             page_location: window.location.href,
             custom_map: {
@@ -46,7 +46,7 @@ export function Analytics() {
           // Add Google Search Console verification meta tag
           const meta = document.createElement('meta');
           meta.name = 'google-site-verification';
-          meta.content = 'GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE';
+          meta.content = 'VrjiEyktWBFyI7XYPNzNSM8Z8c2mvaWVMMld0s_ZXgk';
           document.head.appendChild(meta);
         `}
       </Script>

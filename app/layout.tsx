@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE",
+    google: "VrjiEyktWBFyI7XYPNzNSM8Z8c2mvaWVMMld0s_ZXgk",
   },
   alternates: {
     canonical: "https://suraherahman.com",
@@ -83,15 +83,7 @@ export default function RootLayout({
         {/* Google Analytics (gtag.js) */}
         <Head>
           {/* Google Tag Manager script */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYE936JLWC"></script>
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XYE936JLWC');
-            `}
-          </script>
+          
         </Head>
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
