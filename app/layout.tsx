@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "VrjiEyktWBFyI7XYPNzNSM8Z8c2mvaWVMMld0s_ZXgk",
+    google: "Gooogle_Search_Console_Verification_Code",
   },
   alternates: {
     canonical: "https://suraherahman.com",

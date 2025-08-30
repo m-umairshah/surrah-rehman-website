@@ -46,7 +46,7 @@ export function Analytics() {
           // Add Google Search Console verification meta tag
           const meta = document.createElement('meta');
           meta.name = 'google-site-verification';
-          meta.content = 'VrjiEyktWBFyI7XYPNzNSM8Z8c2mvaWVMMld0s_ZXgk';
+          meta.content = 'Gooogle_Search_Console_Verification_Code';
           document.head.appendChild(meta);
         `}
       </Script>
