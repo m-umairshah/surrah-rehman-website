@@ -68,7 +68,7 @@ export function Header() {
                 <span>{dropdownOpen ? "▲" : "▼"}</span>
               </button>
               {dropdownOpen && (
-                <div className="absolute left-0 mt-2 bg-white border rounded-lg shadow-lg z-10 w-40">
+                <div className="absolute right-0 mt-2 bg-white border rounded-lg shadow-lg z-10 w-40">
                   <Link
                     href="/qari-abdul-basit"
                     className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
