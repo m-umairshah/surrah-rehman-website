@@ -4,13 +4,58 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "Surah Rahman Benefits - Spiritual Rewards and Blessings",
   description:
     "Discover the incredible benefits and spiritual rewards of reciting Surah Rahman. Learn about the blessings, virtues, and positive effects of Chapter 55 of the Holy Quran.",
   keywords:
-    "surah rahman benefits, quran benefits, islamic blessings, spiritual rewards, surah rahman virtues, quranic healing, islamic spirituality",
+    "surah rahman benefits, quran benefits, islamic blessings, spiritual rewards, surah rahman virtues, quranic healing, islamic spirituality, quran recitation blessings, surah rahman virtues and rewards",
+  openGraph: {
+    title: "Surah Rahman Benefits - Spiritual Rewards and Blessings",
+    description:
+      "Discover the spiritual rewards and blessings of reciting Surah Rahman. Learn about the blessings, virtues, and positive effects of Chapter 55 of the Holy Quran.",
+    url: "https://suraherahman.com/surah-rahman-benefits",
+    type: "article",
+    images: [
+      {
+        url: "https://suraherahman.com/surah-rahman-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Surah Rahman Benefits - Spiritual Rewards and Blessings",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Surah Rahman Benefits - Spiritual Rewards and Blessings",
+    description:
+      "Discover the spiritual rewards and blessings of reciting Surah Rahman. Learn about the blessings, virtues, and positive effects of Chapter 55 of the Holy Quran.",
+    images: [
+      "https://suraherahman.com/surah-rahman-image.jpg",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "Google_Search_Console_Verification_Code", // Replace with your actual verification code
+  },
+  alternates: {
+    canonical: "https://suraherahman.com/surah-rahman-benefits",
+    languages: {
+      "en-US": "https://suraherahman.com/surah-rahman-benefits",
+    },
+  },
 }
 
 export default function SurahRahmanBenefitsPage() {
@@ -150,111 +195,36 @@ export default function SurahRahmanBenefitsPage() {
               </Card>
             </div>
 
-            {/* Hadith and Scholarly Opinions */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>Prophetic Traditions & Scholarly Views</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="bg-muted/50 rounded-lg p-6">
-                  <p className="text-lg mb-4 italic">
-                    "Everything has an adornment, and the adornment of the Quran is Surah Rahman."
-                  </p>
-                  <p className="text-sm text-muted-foreground">- Attributed to Prophet Muhammad (PBUH)</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-3">Scholarly Insights:</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li>
-                      • Islamic scholars emphasize that Surah Rahman is particularly effective when recited with
-                      contemplation and understanding
-                    </li>
-                    <li>
-                      • The repetitive verse "Which of the favors of your Lord would you deny?" serves as a powerful
-                      reminder of gratitude
-                    </li>
-                    <li>
-                      • Many scholars recommend reciting it during times of difficulty for comfort and divine mercy
-                    </li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+            {/* Internal Linking Section */}
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold mb-4">Explore More</h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/surah-rahman-arabic">Read Surah Rahman Arabic</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/surah-rahman-english">Read Surah Rahman in English</Link>
+                </Button>
+                <Button asChild size="lg">
+                  <Link href="/surah-rahman-listen-online">Listen to Surah Rahman Online</Link>
+                </Button>
+              </div>
+            </div>
 
-            {/* Best Times to Recite */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>Recommended Times for Recitation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3">Daily Recitation</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li>• After Fajr prayer for morning blessings</li>
-                      <li>• Before Maghrib for evening protection</li>
-                      <li>• Before sleeping for peaceful rest</li>
-                      <li>• During times of stress or anxiety</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-3">Special Occasions</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li>• During Ramadan for increased rewards</li>
-                      <li>• On Fridays for weekly blessings</li>
-                      <li>• When seeking Allah's mercy and forgiveness</li>
-                      <li>• During illness for healing</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* How to Maximize Benefits */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>How to Maximize the Benefits</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">🧘</div>
-                    <h4 className="font-semibold mb-2">With Concentration</h4>
-                    <p className="text-sm text-muted-foreground">Recite with full attention and presence of mind</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">💭</div>
-                    <h4 className="font-semibold mb-2">With Understanding</h4>
-                    <p className="text-sm text-muted-foreground">Reflect on the meanings and contemplate the verses</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">🔄</div>
-                    <h4 className="font-semibold mb-2">With Consistency</h4>
-                    <p className="text-sm text-muted-foreground">Make it a regular part of your daily routine</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Call to Action */}
+            {/* Related Content */}
             <div className="text-center">
-              <Card className="p-8">
-                <h2 className="text-3xl font-bold mb-4">Start Your Journey Today</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Begin experiencing the countless blessings of Surah Rahman
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg">
-                    <Link href="/surah-rahman-listen-online">Listen Now</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link href="/surah-rahman-read-online">Read Online</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link href="/assets/pdf/suraherahman.pdf">Download PDF</Link>
-                  </Button>
-                </div>
-              </Card>
+              <h3 className="text-2xl font-bold mb-6">Related Resources</h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/surah-rahman-benefits">Surah Rahman Spiritual Benefits</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/qari-abdul-basit">Listen to Qari Abdul Basit</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/mishari-al-afasi">Listen to Mishari al-Afasi</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

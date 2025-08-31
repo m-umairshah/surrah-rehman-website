@@ -6,37 +6,58 @@ import "./globals.css"
 import { Analytics } from "@/components/analytics"
 import { StructuredData } from "@/components/structured-data"
 import { Suspense } from "react"
-import Head from "next/head"  // Importing the Head component
+import Script from "next/script" // Correct way to include JSON-LD and Analytics in App Router
 
 export const metadata: Metadata = {
-  title: "Surah Rahman - Complete Quran Chapter with Audio Recitation",
+  metadataBase: new URL("https://suraherahman.com"),
+  title: {
+    default: "Surah Rahman (Ar-Rahman) — Tilawat, MP3, Urdu & English Translation",
+    template: "%s | Surah Rahman",
+  },
   description:
-    "Listen to Surah Rahman with beautiful recitations by Qari Abdul Basit and Mishari al-Afasi. Read in Arabic, Urdu, and English with translations and benefits.",
-  keywords:
-    "surah rahman, surah e rahman,surah e rahman by qari abdul basit, surah e rahman by mishari al-afasi, arabic, urdu, english translation",
+    "Read and listen to Surah Rahman (Ar-Rahman) online. Beautiful recitations by Qari Abdul Basit and Mishari Al-Afasi with Arabic text, Urdu & English translations, virtues and benefits.",
+  keywords: [
+    "surah rahman",
+    "surah e rahman",
+    "surah rahman mp3",
+    "surah rahman tilawat",
+    "abdul basit",
+    "mishari al-afasi",
+    "surah rahman english translation",
+    "surah rahman urdu translation",
+    "ar rahman",
+    "surah rahman arabic",
+    "surah rahman benefits",
+    "qari abdul basit surah rahman",
+    "mishari al-afasi surah rahman",
+  ],
   generator: "Surah Rahman Website",
   openGraph: {
-    title: "Surah Rahman - Complete Quran Chapter with Audio Recitation",
-    description:
-      "Listen to Surah Rahman with beautiful recitations by Qari Abdul Basit and Mishari al-Afasi. Read in Arabic, Urdu, and English with translations and benefits.",
     type: "website",
     locale: "en_US",
     url: "https://suraherahman.com",
     siteName: "Surah Rahman",
+    title:
+      "Surah Rahman (Ar-Rahman) — Audio Recitation, Urdu & English Translation",
+    description:
+      "Listen to Surah Rahman with Qari Abdul Basit & Mishari Al-Afasi. Read Arabic with Urdu & English translations, virtues, and benefits.",
     images: [
       {
         url: "https://suraherahman.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Surah Rahman - The Most Merciful",
+        alt: "Surah Rahman — The Most Merciful",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Surah Rahman - Complete Quran Chapter with Audio Recitation",
-    description: "Listen to Surah Rahman with beautiful recitations by Qari Abdul Basit and Mishari al-Afasi.",
+    title:
+      "Surah Rahman (Ar-Rahman) — Listen & Read with Translation",
+    description:
+      "Beautiful tilawat by Abdul Basit & Mishari Al-Afasi. Arabic with Urdu & English translations and benefits.",
     images: ["https://suraherahman.com/twitter-image.jpg"],
+    site: "@suraherahman",
   },
   robots: {
     index: true,
@@ -50,6 +71,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
+    // Replace with actual Google Search Console verification code
     google: "Gooogle_Search_Console_Verification_Code",
   },
   alternates: {
@@ -60,33 +82,136 @@ export const metadata: Metadata = {
       ur: "https://suraherahman.com/surah-rahman-urdu",
     },
   },
-}
+  category: "Religion",
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="en">
-      <head>
-        {/* Structured Data for SEO */}
-        <StructuredData
-          type="website"
-          data={{
-            name: "Surah Rahman",
-            description: "Complete Surah Rahman with recitations and translations",
-            url: "https://suraherahman.com",
-          }}
-        />
+}: Readonly<{ children: React.ReactNode }>) {
+  // JSON-LD for structured data
+  const ldWebsite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Surah Rahman",
+    url: "https://suraherahman.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://suraherahman.com/search?q={query}",
+      "query-input": "required name=query",
+    },
+  };
 
-        {/* Google Analytics (gtag.js) */}
-        <Head>
-          {/* Google Tag Manager script */}
-          
-        </Head>
+  const ldWebPage = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Surah Rahman (Ar-Rahman) — Tilawat, MP3, Urdu & English Translation",
+    url: "https://suraherahman.com",
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", name: "Surah Rahman", url: "https://suraherahman.com" },
+    description:
+      "Listen to Surah Rahman with Abdul Basit & Mishari Al-Afasi and read Arabic with Urdu & English translation, virtues, and benefits.",
+  };
+
+  const ldAudio = {
+    "@context": "https://schema.org",
+    "@type": "AudioObject",
+    name: "Surah Rahman Recitation — Qari Abdul Basit",
+    url: "https://suraherahman.com/audio/abdul-basit-surah-rahman.mp3", // Update with actual URL
+    encodingFormat: "audio/mpeg",
+    inLanguage: "ar",
+    duration: "PT15M", // Update with actual duration
+    byArtist: { "@type": "Person", name: "Qari Abdul Basit" },
+  };
+
+  const ldBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://suraherahman.com" },
+      { "@type": "ListItem", position: 2, name: "Surah Rahman" },
+    ],
+  };
+
+  const ldFAQ = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are the benefits of Surah Rahman?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Reciting Surah Rahman brings blessings, peace, and spiritual healing. It is often recited for gratitude and reflection on Allah’s Mercy.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where can I listen to Surah Rahman MP3?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "You can stream or download Surah Rahman MP3 by Qari Abdul Basit and Mishari Al-Afasi on this page’s audio players.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Surah Rahman available with Urdu & English translation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text:
+            "Yes, this website provides the original Arabic text alongside translations in both Urdu and English for easy understanding.",
+        },
+      },
+    ],
+  };
+
+  return (
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head>
+        {/* Hreflang + Canonical */}
+        <link rel="canonical" href="https://suraherahman.com" />
+        <link rel="alternate" hrefLang="en-US" href="https://suraherahman.com" />
+        <link rel="alternate" hrefLang="ar" href="https://suraherahman.com/surah-rahman-arabic" />
+        <link rel="alternate" hrefLang="ur" href="https://suraherahman.com/surah-rahman-urdu" />
+        <link rel="alternate" hrefLang="x-default" href="https://suraherahman.com" />
+
+        {/* Optional: small perf boost for GA */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* JSON-LD Structured Data */}
+        <Script id="ld-website" type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify(ldWebsite)
+        }} />
+        <Script id="ld-webpage" type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify(ldWebPage)
+        }} />
+        <Script id="ld-audio" type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify(ldAudio)
+        }} />
+        <Script id="ld-breadcrumbs" type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify(ldBreadcrumbs)
+        }} />
+        <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify(ldFAQ)
+        }} />
+
+        {/* Google Analytics (gtag) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+          `}
+        </Script>
       </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="font-sans">
         <Suspense fallback={null}>
           {children}
           <Analytics />

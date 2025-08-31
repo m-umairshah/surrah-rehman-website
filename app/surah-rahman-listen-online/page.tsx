@@ -6,18 +6,52 @@ import { Button } from "@/components/ui/button"
 import { AudioPlayer } from "@/components/audio-player"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Listen to Surah Rahman Online - Beautiful Quranic Recitations",
+  title: "Listen to Surah Rahman Online - Beautiful Recitations by Qari Abdul Basit & Mishari al-Afasi",
   description:
-    "Listen to Surah Rahman online with beautiful recitations by Qari Abdul Basit and Mishari al-Afasi. High-quality audio streaming of Chapter 55 of the Holy Quran.",
+    "Listen to Surah Rahman online with beautiful recitations by Qari Abdul Basit and Mishari al-Afasi. Enjoy high-quality audio streaming, download options, and mobile-friendly listening of Chapter 55 of the Quran.",
   keywords:
-    "listen surah rahman online, quran audio, islamic audio streaming, surah rahman recitation, quranic audio, online quran listening",
+    "listen surah rahman online, quran audio, islamic audio streaming, surah rahman recitation, quranic recitations, qari abdul basit, mishari al afasi recitation, surah rahman benefits",
+  openGraph: {
+    title: "Listen to Surah Rahman Online - Beautiful Recitations by Qari Abdul Basit & Mishari al-Afasi",
+    description: "Listen to Surah Rahman online with beautiful recitations by Qari Abdul Basit and Mishari al-Afasi. High-quality audio streaming and options for download.",
+    url: "https://suraherahman.com/surah-rahman-listen-online",
+    type: "article",
+    images: [
+      {
+        url: "https://suraherahman.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Listen to Surah Rahman Online - Beautiful Quranic Recitations"
+      }
+    ],
+  },
 }
 
 export default function SurahRahmanListenOnlinePage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData
+        type="article"
+        data={{
+          title: "Listen to Surah Rahman Online",
+          description: "Listen to Surah Rahman with recitations by Qari Abdul Basit and Mishari al-Afasi",
+          url: "https://suraherahman.com/surah-rahman-listen-online",
+        }}
+      />
+      <StructuredData
+        type="audioObject"
+        data={{
+          name: "Surah Rahman by Qari Abdul Basit and Mishari al-Afasi",
+          description: "Beautiful recitations of Surah Rahman",
+          url: "https://suraherahman.com/audio/surah-rahman-qari-basit.mp3",
+          duration: "PT12M45S",
+          reciter: "Qari Abdul Basit Abd us-Samad, Mishari al-Afasi",
+        }}
+      />
+
       <Header />
 
       <main className="flex-1 py-8">

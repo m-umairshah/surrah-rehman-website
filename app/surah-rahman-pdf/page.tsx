@@ -1,17 +1,18 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"  // Include CardContent
 import { Button } from "@/components/ui/button"
-import { PDFViewer } from "@/components/pdf-viewer"
 import Link from "next/link"
+import { PDFViewer } from "@/components/pdf-viewer"
 import type { Metadata } from "next"
+
 
 export const metadata: Metadata = {
   title: "Surah Rahman PDF - Download & Read Online | Complete Chapter 55",
   description:
-    "Read and download Surah Rahman PDF with Arabic text, translations, and proper formatting. Complete Chapter 55 of the Holy Quran in high-quality PDF format.",
+    "Read and download Surah Rahman PDF with Arabic text, translations, and proper formatting. Complete Chapter 55 of the Holy Quran in high-quality PDF format for study and memorization.",
   keywords:
-    "surah rahman pdf, quran pdf download, surah rahman download, islamic pdf, quran chapter 55 pdf, arabic text pdf",
+    "surah rahman pdf, quran pdf download, surah rahman download, islamic pdf, quran chapter 55 pdf, arabic text pdf, surah rahman translation, surah rahman study",
   alternates: {
     canonical: "https://suraherahman.com/surah-rahman-pdf",
   },
@@ -20,6 +21,14 @@ export const metadata: Metadata = {
     description: "Read and download Surah Rahman PDF with Arabic text and translations.",
     url: "https://suraherahman.com/surah-rahman-pdf",
     type: "article",
+    images: [
+      {
+        url: "https://suraherahman.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Surah Rahman PDF - Download & Read Online"
+      }
+    ],
   },
 }
 
@@ -37,7 +46,7 @@ export default function SurahRahmanPDFPage() {
                 Surah Rahman PDF
               </h1>
               <p className="mx-auto max-w-2xl text-base sm:text-lg md:text-xl text-muted-foreground text-balance">
-                Read and download the complete Surah Rahman in PDF format
+                Read and download the complete Surah Rahman in PDF format with authentic Arabic text and translations.
               </p>
             </div>
 

@@ -12,15 +12,46 @@ export const metadata: Metadata = {
   description:
     "Read Surah Rahman in original Arabic text with proper Tajweed. Chapter 55 of the Holy Quran with authentic Arabic script and verse numbers.",
   keywords:
-    "surah rahman arabic, quran arabic text, surah rahman original, arabic quran chapter 55, tajweed, quranic arabic",
-  alternates: {
-    canonical: "https://suraherahman.com/surah-rahman-arabic",
-  },
+    "surah rahman arabic, quran arabic text, surah rahman original, arabic quran chapter 55, tajweed, quranic arabic, surah rahman original arabic text, surah rahman quranic script",
   openGraph: {
     title: "Surah Rahman Arabic Text - Original Quran Chapter 55",
     description: "Read Surah Rahman in original Arabic text with proper Tajweed.",
     url: "https://suraherahman.com/surah-rahman-arabic",
     type: "article",
+    images: [
+      {
+        url: "https://suraherahman.com/suraherahman-1.jpg",  // Example, use actual image URL
+        width: 1200,
+        height: 630,
+        alt: "Surah Rahman Arabic Text - Original Quran Chapter 55",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Surah Rahman Arabic Text - Original Quran Chapter 55",
+    description: "Read Surah Rahman in original Arabic text with Tajweed.",
+    images: ["https://suraherahman.com/suraherahman-1.jpg"],  // Example, use actual image URL
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "Google_Search_Console_Verification_Code",  // Replace with actual code
+  },
+  alternates: {
+    canonical: "https://suraherahman.com/surah-rahman-arabic",
+    languages: {
+      "en-US": "https://suraherahman.com/surah-rahman-arabic",
+    },
   },
 }
 
@@ -163,7 +194,7 @@ export default function SurahRahmanArabicPage() {
 
             <Card className="mb-8">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</CardTitle>
+                <CardTitle className="text-2xl font-arabic">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</CardTitle>
                 <p className="text-sm text-muted-foreground">
                   In the name of Allah, the Most Gracious, the Most Merciful
                 </p>
@@ -189,7 +220,7 @@ export default function SurahRahmanArabicPage() {
                   </div>
                   <div className="flex justify-between items-center text-sm text-muted-foreground border-t pt-4">
                     <span>Verse {verse.number}</span>
-                    <span>سُورَةُ الرَّحۡمَٰن</span>
+                    <span className="font-arabic">سُورَةُ الرَّحۡمَٰن</span>
                   </div>
                 </Card>
               ))}

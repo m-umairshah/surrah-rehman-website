@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Surah Rahman Urdu Translation - سورہ رحمان اردو ترجمہ",
   description:
     "Surah Rahman ka Urdu tarjuma. Quran Pak ki 55vi Surah ka mukammal Urdu translation aur tafseer. سورہ رحمان کا اردو ترجمہ۔",
-  keywords: "surah rahman urdu, سورہ رحمان اردو, quran urdu translation, surah rahman tarjuma, islamic urdu content",
+  keywords: "surah rahman urdu, سورہ رحمان اردو, quran urdu translation, surah rahman tarjuma, islamic urdu content, surah rahman read online",
 }
 
 export default function SurahRahmanUrduPage() {

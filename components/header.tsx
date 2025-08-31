@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu as MenuIcon, X, Home, Info, Headphones, BookOpen, FileText, MessageCircle } from "lucide-react"
+import { Menu as MenuIcon, X, Home, Info, Headphones, BookOpen, FileText, MessageCircle, Mic } from "lucide-react"
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null)
   const pathname = usePathname()
 
@@ -37,7 +38,6 @@ export function Header() {
     { href: "/surah-rahman-listen-online", label: "Listen Online", icon: Headphones },
     { href: "/surah-rahman-read-online", label: "Read Online", icon: BookOpen },
     { href: "/surah-rahman-pdf", label: "PDF", icon: FileText },
-    { href: "/contact-us", label: "Contact", icon: MessageCircle },
   ]
 
   return (
@@ -52,10 +52,38 @@ export function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map(({ href, label }) => (
-              <Link key={href} href={href} className="hover:text-accent transition-colors">
+              <Link key={href} href={href} className="hover:text-foreground transition-colors">
                 {label}
               </Link>
             ))}
+
+            {/* Reciter Dropdown */}
+            <div className="relative">
+              <button
+                className="text-base font-medium text-primary-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                aria-expanded={dropdownOpen ? "true" : "false"}
+              >
+                Reciters
+                <span>{dropdownOpen ? "▲" : "▼"}</span>
+              </button>
+              {dropdownOpen && (
+                <div className="absolute left-0 mt-2 bg-white border rounded-lg shadow-lg z-10 w-40">
+                  <Link
+                    href="/qari-abdul-basit"
+                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                  >
+                    Qari Abdul Basit
+                  </Link>
+                  <Link
+                    href="/mishari-al-afasi"
+                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                  >
+                    Mishari al-Afasi
+                  </Link>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Mobile Toggle */}
@@ -116,15 +144,6 @@ export function Header() {
           </div>
         </div>
 
-        {/* Search (optional – remove if not needed) */}
-        {/* <div className="px-4 pt-4">
-          <input
-            type="search"
-            placeholder="Search…"
-            className="w-full rounded-xl bg-white/10 px-4 py-2 text-white placeholder:text-white/70 outline-none ring-1 ring-white/20 focus:ring-2 focus:ring-white/40"
-          />
-        </div> */}
-
         {/* Links */}
         <nav className="mt-2 px-2 pb-6">
           <ul className="space-y-1">
@@ -150,6 +169,33 @@ export function Header() {
                 </Link>
               </li>
             ))}
+            {/* Reciter Links in Mobile */}
+            <li>
+              <Link
+                href="/qari-abdul-basit"
+                className="group flex items-center gap-3 rounded-xl px-4 py-3 outline-none 
+                ring-1 ring-white/10 hover:ring-white/25 hover:bg-white/5
+                focus-visible:ring-2 focus-visible:ring-white/50 transition"
+              >
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 group-hover:bg-white/20 transition">
+                  <Mic className="h-5 w-5" />
+                </span>
+                <span className="flex-1 text-base font-medium">Qari Abdul Basit</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/mishari-al-afasi"
+                className="group flex items-center gap-3 rounded-xl px-4 py-3 outline-none 
+                ring-1 ring-white/10 hover:ring-white/25 hover:bg-white/5
+                focus-visible:ring-2 focus-visible:ring-white/50 transition"
+              >
+                <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 group-hover:bg-white/20 transition">
+                  <Mic className="h-5 w-5" />
+                </span>
+                <span className="flex-1 text-base font-medium">Mishari al-Afasi</span>
+              </Link>
+            </li>
           </ul>
         </nav>
 

@@ -4,18 +4,71 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "Surah Rahman English Translation - Chapter 55 of the Quran",
   description:
     "Read Surah Rahman in English translation. Complete Chapter 55 of the Holy Quran with verse-by-verse English translation and meaning.",
   keywords:
-    "surah rahman english, quran english translation, chapter 55 english, surah rahman meaning, islamic english content",
+    "surah rahman english, quran english translation, chapter 55 english, surah rahman meaning, islamic english content, chapter 55 of the quran, english translation of surah rahman",
+  openGraph: {
+    title: "Surah Rahman English Translation - Chapter 55 of the Quran",
+    description:
+      "Read Surah Rahman in English translation. Complete Chapter 55 of the Holy Quran with verse-by-verse English translation and meaning.",
+    url: "https://suraherahman.com/surah-rahman-english",
+    type: "article",
+    images: [
+      {
+        url: "https://suraherahman.com/surah-rahman-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Surah Rahman - English Translation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Surah Rahman English Translation - Chapter 55 of the Quran",
+    description:
+      "Read Surah Rahman in English translation. Complete Chapter 55 of the Holy Quran with verse-by-verse English translation and meaning.",
+    images: ["https://suraherahman.com/surah-rahman-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "Google_Search_Console_Verification_Code", // Replace with your actual verification code
+  },
+  alternates: {
+    canonical: "https://suraherahman.com/surah-rahman-english",
+    languages: {
+      "en-US": "https://suraherahman.com/surah-rahman-english",
+      ar: "https://suraherahman.com/surah-rahman-arabic",
+      ur: "https://suraherahman.com/surah-rahman-urdu",
+    },
+  },
 }
 
 export default function SurahRahmanEnglishPage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData
+        type="article"
+        data={{
+          title: "Surah Rahman English Translation",
+          description: "Read Surah Rahman in English translation with verse-by-verse meanings.",
+          url: "https://suraherahman.com/surah-rahman-english",
+        }}
+      />
       <Header />
 
       <main className="flex-1 py-8">
@@ -317,3 +370,5 @@ const englishVerses = [
       "Most Blessed is the Name of your Lord, the Master of glory and splendour and the Master of bounty and honour.",
   },
 ]
+
+

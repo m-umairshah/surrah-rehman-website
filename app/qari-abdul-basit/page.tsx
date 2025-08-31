@@ -6,21 +6,57 @@ import { AudioPlayer } from "@/components/audio-player"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { StructuredData } from "@/components/structured-data"
+import Script from "next/script" // Correct way to include JSON-LD in App Router
 
 export const metadata: Metadata = {
   title: "Qari Abdul Basit - Surah Rahman Recitation | Beautiful Quranic Voice",
   description:
     "Listen to Surah Rahman recited by the legendary Qari Abdul Basit Abd us-Samad. Experience his melodious and soul-stirring recitation of Chapter 55 of the Holy Quran.",
   keywords:
-    "qari abdul basit, abdul basit surah rahman, quranic recitation, famous qari, islamic audio, quran tilawat, abdul basit recitation",
-  alternates: {
-    canonical: "https://suraherahman.com/qari-abdul-basit",
-  },
+    "qari abdul basit, abdul basit surah rahman, quranic recitation, famous qari, islamic audio, quran tilawat, abdul basit recitation, qari abdul basit biography, qari voice",
   openGraph: {
     title: "Qari Abdul Basit - Surah Rahman Recitation",
-    description: "Listen to Surah Rahman recited by the legendary Qari Abdul Basit Abd us-Samad.",
+    description:
+      "Listen to Surah Rahman recited by the legendary Qari Abdul Basit Abd us-Samad, known for his beautiful and emotional recitation of the Quran.",
     url: "https://suraherahman.com/qari-abdul-basit",
     type: "profile",
+    images: [
+      {
+        url: "https://suraherahman.com/images/qari-abdul-basit.webp",
+        width: 1200,
+        height: 630,
+        alt: "Qari Abdul Basit Abd us-Samad - Surah Rahman Recitation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Qari Abdul Basit - Surah Rahman Recitation",
+    description:
+      "Listen to Surah Rahman recited by the legendary Qari Abdul Basit Abd us-Samad.",
+    images: [
+      "https://suraherahman.com/images/qari-abdul-basit.webp",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "Google_Search_Console_Verification_Code",
+  },
+  alternates: {
+    canonical: "https://suraherahman.com/qari-abdul-basit",
+    languages: {
+      "en-US": "https://suraherahman.com/qari-abdul-basit",
+    },
   },
 }
 
@@ -40,7 +76,7 @@ export default function QariAbdulBasitPage() {
         type="audioObject"
         data={{
           name: "Surah Rahman by Qari Abdul Basit",
-          description: "Beautiful recitation of Surah Rahman by Qari Abdul Basit",
+          description: "Beautiful recitation of Surah Rahman by Qari Abdul Basit Abd us-Samad",
           url: "https://suraherahman.com/audio/surah-rahman-abdul-basit.mp3",
           duration: "PT12M45S",
           reciter: "Qari Abdul Basit Abd us-Samad",
@@ -56,7 +92,7 @@ export default function QariAbdulBasitPage() {
             <div className="text-center mb-12">
               <div className="mb-6">
                 <img
-                  src="https://suraherahman.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
+                  src="https://suraherahman.com/images/qari-abdul-basit.webp"
                   alt="Qari Abdul Basit Abd us-Samad"
                   className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-primary/20"
                 />
@@ -72,7 +108,7 @@ export default function QariAbdulBasitPage() {
                 src="/assets/mp3/suraherahman-qari-basit.mp3"
                 title="Surah Rahman"
                 reciter="Qari Abdul Basit Abd us-Samad"
-                reciterImage="https://suraherahman.com/portrait-of-qari-abdul-basit--elderly-islamic-scho-0xiC7DngxGgKaRkPVJJbrUgoYo34vJ.webp"
+                reciterImage="https://suraherahman.com/images/qari-abdul-basit.webp"
                 downloadUrl="/assets/mp3/suraherahman-qari-basit.mp3"
               />
             </div>

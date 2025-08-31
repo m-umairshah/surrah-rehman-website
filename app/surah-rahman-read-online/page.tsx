@@ -8,9 +8,27 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Read Surah Rahman Online - Arabic, Urdu & English Translations",
   description:
-    "Read Surah Rahman online in Arabic, Urdu, and English. Complete Chapter 55 of the Holy Quran with multiple language options and beautiful formatting.",
+    "Read Surah Rahman online in Arabic, Urdu, and English. Complete Chapter 55 of the Holy Quran with multiple language options and beautiful formatting for study and memorization.",
   keywords:
-    "read surah rahman online, quran online reading, surah rahman text, islamic reading online, quran chapter 55",
+    "read surah rahman online, quran online reading, surah rahman text, islamic reading online, quran chapter 55, surah rahman arabic, surah rahman english, surah rahman urdu, islamic translations",
+  alternates: {
+    canonical: "https://suraherahman.com/surah-rahman-read-online",
+  },
+  openGraph: {
+    title: "Read Surah Rahman Online - Arabic, Urdu & English Translations",
+    description:
+      "Read Surah Rahman online in Arabic, Urdu, and English. Complete Chapter 55 of the Holy Quran with multiple language options and beautiful formatting.",
+    url: "https://suraherahman.com/surah-rahman-read-online",
+    type: "article",
+    images: [
+      {
+        url: "https://suraherahman.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Read Surah Rahman Online"
+      }
+    ],
+  },
 }
 
 export default function SurahRahmanReadOnlinePage() {
@@ -28,6 +46,7 @@ export default function SurahRahmanReadOnlinePage() {
               </p>
             </div>
 
+            {/* Language Selection */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <Card className="text-center">
                 <CardHeader>
@@ -79,6 +98,7 @@ export default function SurahRahmanReadOnlinePage() {
               </Card>
             </div>
 
+            {/* Surah Rahman Description */}
             <div className="text-center mb-12">
               <Card className="p-8">
                 <h2 className="text-3xl font-bold mb-4">About Surah Rahman</h2>
@@ -102,6 +122,7 @@ export default function SurahRahmanReadOnlinePage() {
               </Card>
             </div>
 
+            {/* Related Content */}
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-6">More Ways to Experience Surah Rahman</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

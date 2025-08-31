@@ -5,13 +5,58 @@ import { Button } from "@/components/ui/button"
 import { AudioPlayer } from "@/components/audio-player"
 import Link from "next/link"
 import type { Metadata } from "next"
+import Script from "next/script" // Correct way to include JSON-LD in App Router
 
 export const metadata: Metadata = {
   title: "Mishari al-Afasi - Surah Rahman Recitation | Contemporary Quranic Voice",
   description:
     "Listen to Surah Rahman recited by Sheikh Mishari Rashid al-Afasi. Experience his beautiful and contemporary recitation style of Chapter 55 of the Holy Quran.",
   keywords:
-    "mishari al-afasi, mishari rashid alafasy, surah rahman recitation, contemporary qari, islamic audio, quran recitation, modern quranic voice",
+    "mishari al-afasi, mishari rashid alafasy, surah rahman recitation, contemporary qari, islamic audio, quran recitation, modern quranic voice, qari mishari al afasi, surah rahman mp3, arabic recitation",
+  openGraph: {
+    title: "Mishari al-Afasi - Surah Rahman Recitation | Contemporary Quranic Voice",
+    description:
+      "Listen to Surah Rahman recited by Sheikh Mishari Rashid al-Afasi. Experience his beautiful and contemporary recitation style of Chapter 55 of the Holy Quran.",
+    type: "website",
+    url: "https://suraherahman.com/mishari-al-afasi",
+    images: [
+      {
+        url: "https://suraherahman.com/images/mishari-al-afasi.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Sheikh Mishari Rashid al-Afasi - Surah Rahman Recitation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mishari al-Afasi - Surah Rahman Recitation",
+    description:
+      "Listen to Surah Rahman recited by Sheikh Mishari Rashid al-Afasi, with his unique, contemporary Quranic recitation style.",
+    images: ["https://suraherahman.com/images/mishari-al-afasi.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "Google_Search_Console_Verification_Code",
+  },
+  alternates: {
+    canonical: "https://suraherahman.com/mishari-al-afasi",
+    languages: {
+      "en-US": "https://suraherahman.com/mishari-al-afasi",
+      ar: "https://suraherahman.com/mishari-al-afasi-arabic",
+      ur: "https://suraherahman.com/mishari-al-afasi-urdu",
+    },
+  },
 }
 
 export default function MishariAlAfasiPage() {
@@ -26,7 +71,7 @@ export default function MishariAlAfasiPage() {
             <div className="text-center mb-12">
               <div className="mb-6">
                 <img
-                  src="https://suraherahman.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
+                  src="https://suraherahman.com/images/mishari-al-afasi.jpeg"
                   alt="Sheikh Mishari Rashid al-Afasi"
                   className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-primary/20"
                 />
@@ -42,7 +87,7 @@ export default function MishariAlAfasiPage() {
                 src="/assets/mp3/Surah-Ar-Rahman-Mishari-Al-afasi.mp3"
                 title="Surah Rahman"
                 reciter="Sheikh Mishari Rashid al-Afasi"
-                reciterImage="https://suraherahman.com/portrait-of-sheikh-mishari-al-afasi--middle-aged-i-9uEbukyCldmhQ8PmQGm4iHiffarNBI.jpeg"
+                reciterImage="https://suraherahman.com/images/mishari-al-afasi.jpeg"
                 downloadUrl="/assets/mp3/Surah-Ar-Rahman-Mishari-Al-afasi.mp3"
               />
             </div>

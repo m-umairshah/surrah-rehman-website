@@ -5,6 +5,7 @@ import { HomeSeoArticle } from "@/components/home-seo-article"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import dynamic from "next/dynamic"
+import Script from "next/script" // Correct way to include JSON-LD in App Router
 
 // Defer loading the (heavier) gallery JS until after hydration
 const SurahImageGallery = dynamic(
@@ -142,7 +143,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Image Gallery Section (below the fold for better LCP) */}
+        {/* Image Gallery Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
@@ -157,7 +158,6 @@ export default function HomePage() {
               </Button>
             </div>
 
-            {/* The gallery component should be responsive internally */}
             <SurahImageGallery images={galleryImages} title="Surah Rahman - Arabic Pages" />
           </div>
         </section>
@@ -182,6 +182,39 @@ export default function HomePage() {
       </main>
 
       <Footer />
+      
+      {/* Structured Data - JSON-LD for FAQ */}
+      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What are the benefits of Surah Rahman?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Reciting Surah Rahman brings blessings, peace, and spiritual healing. It is often recited for gratitude and reflection on Allah’s Mercy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where can I listen to Surah Rahman MP3?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can stream or download Surah Rahman MP3 by Qari Abdul Basit and Mishari Al-Afasi on this page’s audio players."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Surah Rahman available with Urdu & English translation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, this website provides the original Arabic text alongside translations in both Urdu and English for easy understanding."
+              }
+            }
+          ]
+        }) }} />
     </div>
   )
 }
