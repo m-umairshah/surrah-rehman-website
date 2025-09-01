@@ -5,8 +5,7 @@
 
 @font-face {
   font-family: 'Noorehuda';
-  src: url('/fonts/noorehuda-regular.woff2') format('woff2'),
-       url('/fonts/noorehuda-regular.ttf') format('truetype');
+  src: url('/fonts/noorehuda-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* ✅ ensures text is visible immediately */
