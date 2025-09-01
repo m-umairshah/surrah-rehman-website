@@ -134,7 +134,7 @@ export function Header() {
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
-        aria-label="Main menu"
+        aria-labelledby="mobile-menu-title"
         className={`fixed right-0 top-0 z-50 h-full w-[86%] max-w-sm md:hidden 
         transform transition-transform duration-300
         bg-gradient-to-b from-primary to-primary/95 text-primary-foreground shadow-2xl
@@ -142,7 +142,11 @@ export function Header() {
         onTransitionEnd={() => {
           if (open) firstLinkRef.current?.focus();
         }}
-        >
+      >
+        {/* 🔹 Accessible name for the dialog */}
+        <h2 id="mobile-menu-title" className="sr-only">
+          Main menu
+        </h2>
         {/* Drawer Header */}
         <div className="relative">
           <div className="h-32 w-full bg-[radial-gradient(80%_80%_at_100%_0%,rgba(255,255,255,0.22),transparent)]" />
