@@ -120,102 +120,112 @@ const galleryImages = [
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-primary/10 to-background py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">Surah Rahman</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground text-balance mb-8 max-w-3xl mx-auto">
-              Experience the beauty and blessings of Surah Rahman with authentic Arabic text, translations in multiple
-              languages, and beautiful recitations by renowned Qaris.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="/surah-rahman-listen-online">Listen Online</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/surah-rahman-read-online">Read Online</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+  <div className="container mx-auto px-4 text-center">
+    <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">Surah Rahman</h1>
+    <p className="text-xl md:text-2xl text-muted-foreground text-balance mb-8 max-w-3xl mx-auto">
+      Experience the beauty and blessings of Surah Rahman with authentic Arabic text, translations in multiple
+      languages, and beautiful recitations by renowned Qaris.
+    </p>
 
-        {/* Features Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Explore Surah Rahman</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Arabic Text</CardTitle>
-                  <CardDescription>Read the original Arabic text with proper Tajweed</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild className="w-full">
-                    <Link href="/surah-rahman-arabic">Read Arabic</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Filled: guaranteed contrast */}
+      <Button asChild size="lg" className="bg-foreground text-background hover:bg-foreground/90">
+        <Link href="/surah-rahman-listen-online">Listen Online</Link>
+      </Button>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Urdu Translation</CardTitle>
-                  <CardDescription>Understand the meaning in beautiful Urdu</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild className="w-full">
-                    <Link href="/surah-rahman-urdu">Read Urdu</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+      {/* Outline: readable text + visible border */}
+      <Button
+        asChild
+        variant="outline"
+        size="lg"
+        className="text-foreground border-foreground/40 hover:bg-foreground/10"
+      >
+        <Link href="/surah-rahman-read-online">Read Online</Link>
+      </Button>
+    </div>
+  </div>
+</section>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>English Translation</CardTitle>
-                  <CardDescription>Comprehend the verses in clear English</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild className="w-full">
-                    <Link href="/surah-rahman-english">Read English</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+<section className="py-16">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">Explore Surah Rahman</h2>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Qari Abdul Basit</CardTitle>
-                  <CardDescription>Listen to the melodious recitation</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild className="w-full">
-                    <Link href="/qari-abdul-basit">Listen Now</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Arabic Text</CardTitle>
+          <CardDescription>Read the original Arabic text with proper Tajweed</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild className="w-full bg-foreground text-background hover:bg-foreground/90">
+            <Link href="/surah-rahman-arabic">Read Arabic</Link>
+          </Button>
+        </CardContent>
+      </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Mishari al-Afasi</CardTitle>
-                  <CardDescription>Experience the beautiful recitation</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild className="w-full">
-                    <Link href="/mishari-al-afasi">Listen Now</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle>Urdu Translation</CardTitle>
+          <CardDescription>Understand the meaning in beautiful Urdu</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild className="w-full bg-foreground text-background hover:bg-foreground/90">
+            <Link href="/surah-rahman-urdu">Read Urdu</Link>
+          </Button>
+        </CardContent>
+      </Card>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>PDF Download</CardTitle>
-                  <CardDescription>View and download high-quality PDF</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild className="w-full">
-                    <Link href="/surah-rahman-pdf">View PDF</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+      <Card>
+        <CardHeader>
+          <CardTitle>English Translation</CardTitle>
+          <CardDescription>Comprehend the verses in clear English</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild className="w-full bg-foreground text-background hover:bg-foreground/90">
+            <Link href="/surah-rahman-english">Read English</Link>
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Qari Abdul Basit</CardTitle>
+          <CardDescription>Listen to the melodious recitation</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild className="w-full bg-foreground text-background hover:bg-foreground/90">
+            <Link href="/qari-abdul-basit">Listen Now</Link>
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Mishari al-Afasi</CardTitle>
+          <CardDescription>Experience the beautiful recitation</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild className="w-full bg-foreground text-background hover:bg-foreground/90">
+            <Link href="/mishari-al-afasi">Listen Now</Link>
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>PDF Download</CardTitle>
+          <CardDescription>View and download high-quality PDF</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button asChild className="w-full bg-foreground text-background hover:bg-foreground/90">
+            <Link href="/surah-rahman-pdf">View PDF</Link>
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
         <SurahFull verses={arabicVerses} />
         {/* Image Gallery Section */}
         <section className="py-16 bg-muted/30">
