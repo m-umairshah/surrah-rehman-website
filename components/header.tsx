@@ -130,19 +130,7 @@ export function Header() {
       />
 
       {/* Drawer */}
-      <aside
-        id="mobile-menu"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="mobile-menu-title"
-        className={`fixed right-0 top-0 z-50 h-full w-[86%] max-w-sm md:hidden 
-        transform transition-transform duration-300
-        bg-gradient-to-b from-primary to-primary/95 text-primary-foreground shadow-2xl
-        ${open ? "translate-x-0" : "translate-x-full"}`}
-        onTransitionEnd={() => {
-          if (open) firstLinkRef.current?.focus();
-        }}
-      >
+      
         <div
           id="mobile-menu"
           role="dialog"
@@ -258,7 +246,6 @@ export function Header() {
             </div>
           </div>
         </div>
-      </aside>
     </header>
   );
 }
