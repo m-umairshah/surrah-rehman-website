@@ -146,9 +146,9 @@ export function Header() {
         >
           
           {/* 🔹 Accessible name for the dialog */}
-          <h2 id="mobile-menu-title" className="sr-only">
+          <p id="mobile-menu-title" className="sr-only">
             Main menu
-          </h2>
+          </p>
           {/* Drawer Header */}
           <div className="relative">
             <div className="h-32 w-full bg-[radial-gradient(80%_80%_at_100%_0%,rgba(255,255,255,0.22),transparent)]" />
