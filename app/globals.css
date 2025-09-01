@@ -5,10 +5,23 @@
 
 @font-face {
   font-family: 'Noorehuda';
-  src: url('/fonts/noorehuda-regular.ttf') format('truetype');
+  src: url('/fonts/noorehuda-regular.woff2') format('woff2'),
+       url('/fonts/noorehuda-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* ✅ ensures text is visible immediately */
+  /* Optional: reduce CLS (layout shift) */
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+  size-adjust: 102%;
 }
+
+.font-arabic {
+  font-family: 'Noorehuda', sans-serif;
+  font-size: 33px;  /* You can also use Tailwind utility: text-[33px] */
+}
+
 
 :root {
   /* Updated color tokens to match Islamic design brief */
@@ -45,10 +58,6 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.9 0 0);
   --sidebar-ring: oklch(0.4 0 0 / 0.1);
-}
-.font-arabic {
-  font-family: 'Noorehuda', sans-serif; /* Fallback to sans-serif if Noorehuda is unavailable */
-  font-size: 33px;
 }
 
 .dark {
