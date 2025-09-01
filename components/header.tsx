@@ -144,11 +144,7 @@ export function Header() {
             if (open) firstLinkRef.current?.focus();
           }}
         >
-          {/* Accessible name for the dialog */}
-          <h2 id="mobile-menu-title" className="sr-only">
-            Main menu
-          </h2>
-
+          
           {/* 🔹 Accessible name for the dialog */}
           <h2 id="mobile-menu-title" className="sr-only">
             Main menu
