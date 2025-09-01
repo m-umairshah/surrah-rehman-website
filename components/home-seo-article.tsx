@@ -203,7 +203,7 @@ export function HomeSeoArticle() {
               <strong>Surah Rahman</strong> (also spelled <em>Surah Rehman</em>)
               emphasizes Allah’s mercy and the blessings upon humanity and jinn.
               Its recurring verse —{" "}
-              <em className="font-arabic">“فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ”</em> — invites deep
+              <em className="!text-[27px] font-arabic">“فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ”</em> — invites deep
               reflection on gratitude, balance, and stewardship.
             </p>
             <blockquote className="mt-4 rounded-xl border bg-card/50 p-4 text-center">
