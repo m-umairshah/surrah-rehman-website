@@ -9,7 +9,7 @@ function toArabicDigits(n: number) {
 
 function AyahEnd({ n }: { n: number }) {
   return (
-    <span className="mx-1 text-primary">
+    <span className="mx-1 text-primary text-[16px]">
       ﴿{toArabicDigits(n)}﴾
     </span>
   );
