@@ -74,14 +74,7 @@ export const metadata: Metadata = {
     // Replace with actual Google Search Console verification code
     google: "Gooogle_Search_Console_Verification_Code",
   },
-  alternates: {
-    canonical: "https://suraherahman.com",
-    languages: {
-      "en-US": "https://suraherahman.com",
-      ar: "https://suraherahman.com/surah-rahman-arabic",
-      ur: "https://suraherahman.com/surah-rahman-urdu",
-    },
-  },
+  
   category: "Religion",
 };
 
@@ -169,13 +162,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
-        {/* Hreflang + Canonical */}
-        <link rel="canonical" href="https://suraherahman.com" />
-        <link rel="alternate" hrefLang="en-US" href="https://suraherahman.com" />
-        <link rel="alternate" hrefLang="ar" href="https://suraherahman.com/surah-rahman-arabic" />
-        <link rel="alternate" hrefLang="ur" href="https://suraherahman.com/surah-rahman-urdu" />
-        <link rel="alternate" hrefLang="x-default" href="https://suraherahman.com" />
-
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Optional: small perf boost for GA */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />

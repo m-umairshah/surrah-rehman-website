@@ -11,9 +11,7 @@ export const metadata: Metadata = {
     "Read Surah Rahman online in Arabic, Urdu, and English. Complete Chapter 55 of the Holy Quran with multiple language options and beautiful formatting for study and memorization.",
   keywords:
     "read surah rahman online, quran online reading, surah rahman text, islamic reading online, quran chapter 55, surah rahman arabic, surah rahman english, surah rahman urdu, islamic translations",
-  alternates: {
-    canonical: "https://suraherahman.com/surah-rahman-read-online",
-  },
+
   openGraph: {
     title: "Read Surah Rahman Online - Arabic, Urdu & English Translations",
     description:

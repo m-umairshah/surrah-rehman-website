@@ -52,12 +52,7 @@ export const metadata: Metadata = {
   verification: {
     google: "Google_Search_Console_Verification_Code",
   },
-  alternates: {
-    canonical: "https://suraherahman.com/qari-abdul-basit",
-    languages: {
-      "en-US": "https://suraherahman.com/qari-abdul-basit",
-    },
-  },
+
 }
 
 export default function QariAbdulBasitPage() {

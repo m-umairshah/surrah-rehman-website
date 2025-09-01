@@ -49,14 +49,7 @@ export const metadata: Metadata = {
   verification: {
     google: "Google_Search_Console_Verification_Code",
   },
-  alternates: {
-    canonical: "https://suraherahman.com/mishari-al-afasi",
-    languages: {
-      "en-US": "https://suraherahman.com/mishari-al-afasi",
-      ar: "https://suraherahman.com/mishari-al-afasi-arabic",
-      ur: "https://suraherahman.com/mishari-al-afasi-urdu",
-    },
-  },
+
 }
 
 export default function MishariAlAfasiPage() {

@@ -48,14 +48,7 @@ export const metadata: Metadata = {
   verification: {
     google: "Google_Search_Console_Verification_Code", // Replace with your actual verification code
   },
-  alternates: {
-    canonical: "https://suraherahman.com/surah-rahman-english",
-    languages: {
-      "en-US": "https://suraherahman.com/surah-rahman-english",
-      ar: "https://suraherahman.com/surah-rahman-arabic",
-      ur: "https://suraherahman.com/surah-rahman-urdu",
-    },
-  },
+
 }
 
 export default function SurahRahmanEnglishPage() {

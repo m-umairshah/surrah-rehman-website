@@ -50,12 +50,7 @@ export const metadata: Metadata = {
   verification: {
     google: "Google_Search_Console_Verification_Code", // Replace with your actual verification code
   },
-  alternates: {
-    canonical: "https://suraherahman.com/surah-rahman-benefits",
-    languages: {
-      "en-US": "https://suraherahman.com/surah-rahman-benefits",
-    },
-  },
+
 }
 
 export default function SurahRahmanBenefitsPage() {

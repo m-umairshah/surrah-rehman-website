@@ -13,9 +13,7 @@ export const metadata: Metadata = {
     "Read and download Surah Rahman PDF with Arabic text, translations, and proper formatting. Complete Chapter 55 of the Holy Quran in high-quality PDF format for study and memorization.",
   keywords:
     "surah rahman pdf, quran pdf download, surah rahman download, islamic pdf, quran chapter 55 pdf, arabic text pdf, surah rahman translation, surah rahman study",
-  alternates: {
-    canonical: "https://suraherahman.com/surah-rahman-pdf",
-  },
+  
   openGraph: {
     title: "Surah Rahman PDF - Download & Read Online",
     description: "Read and download Surah Rahman PDF with Arabic text and translations.",
