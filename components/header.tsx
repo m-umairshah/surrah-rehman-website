@@ -1,44 +1,58 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Menu as MenuIcon, X, Home, Info, Headphones, BookOpen, FileText, MessageCircle, Mic } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  Menu as MenuIcon,
+  X,
+  Home,
+  Info,
+  Headphones,
+  BookOpen,
+  FileText,
+  MessageCircle,
+  Mic,
+} from "lucide-react";
 
 export function Header() {
-  const [open, setOpen] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(false)
-  const firstLinkRef = useRef<HTMLAnchorElement | null>(null)
-  const pathname = usePathname()
+  const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
+  const pathname = usePathname();
 
   // Close menu on route change
   useEffect(() => {
-    setOpen(false)
-  }, [pathname])
+    setOpen(false);
+  }, [pathname]);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
-    if (open) document.body.classList.add("overflow-hidden")
-    else document.body.classList.remove("overflow-hidden")
-    return () => document.body.classList.remove("overflow-hidden")
-  }, [open])
+    if (open) document.body.classList.add("overflow-hidden");
+    else document.body.classList.remove("overflow-hidden");
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [open]);
 
   // ESC to close
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false)
-    window.addEventListener("keydown", onKey)
-    return () => window.removeEventListener("keydown", onKey)
-  }, [])
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   const navItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/about-us", label: "About Us", icon: Info },
     { href: "/surah-rahman-benefits", label: "Benefits", icon: FileText },
-    { href: "/surah-rahman-listen-online", label: "Listen Online", icon: Headphones },
+    {
+      href: "/surah-rahman-listen-online",
+      label: "Listen Online",
+      icon: Headphones,
+    },
     { href: "/surah-rahman-read-online", label: "Read Online", icon: BookOpen },
     { href: "/surah-rahman-pdf", label: "PDF", icon: FileText },
-  ]
+  ];
 
   return (
     <header className="bg-primary text-primary-foreground shadow-sm">
@@ -52,7 +66,11 @@ export function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map(({ href, label }) => (
-              <Link key={href} href={href} className="hover:text-foreground transition-colors">
+              <Link
+                key={href}
+                href={href}
+                className="hover:text-foreground transition-colors"
+              >
                 {label}
               </Link>
             ))}
@@ -88,9 +106,8 @@ export function Header() {
 
           {/* Mobile Toggle */}
           <Button
-            variant="secondary"
             size="sm"
-            className="md:hidden"
+            className="md:hidden bg-white/10 text-white hover:bg-white/10"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
             aria-expanded={open}
@@ -104,7 +121,9 @@ export function Header() {
       {/* Overlay */}
       <div
         className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setOpen(false)}
         aria-hidden="true"
@@ -121,7 +140,7 @@ export function Header() {
         bg-gradient-to-b from-primary to-primary/95 text-primary-foreground shadow-2xl
         ${open ? "translate-x-0" : "translate-x-full"}`}
         onTransitionEnd={() => {
-          if (open) firstLinkRef.current?.focus()
+          if (open) firstLinkRef.current?.focus();
         }}
       >
         {/* Drawer Header */}
@@ -180,7 +199,9 @@ export function Header() {
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 group-hover:bg-white/20 transition">
                   <Mic className="h-5 w-5" />
                 </span>
-                <span className="flex-1 text-base font-medium">Qari Abdul Basit</span>
+                <span className="flex-1 text-base font-medium">
+                  Qari Abdul Basit
+                </span>
               </Link>
             </li>
             <li>
@@ -193,7 +214,9 @@ export function Header() {
                 <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/10 group-hover:bg-white/20 transition">
                   <Mic className="h-5 w-5" />
                 </span>
-                <span className="flex-1 text-base font-medium">Mishari al-Afasi</span>
+                <span className="flex-1 text-base font-medium">
+                  Mishari al-Afasi
+                </span>
               </Link>
             </li>
           </ul>
@@ -212,5 +235,5 @@ export function Header() {
         </div>
       </aside>
     </header>
-  )
+  );
 }
