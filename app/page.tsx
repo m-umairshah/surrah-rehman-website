@@ -105,23 +105,13 @@ const SurahImageGallery = dynamic(
 )
 
 export default function HomePage() {
-  const galleryImages = [
-    {
-      src: "https://suraherahman.com/suraherahman-1.jpg",
-      alt: "Surah Rahman – Arabic Page 1",
-      page: 1,
-    },
-    {
-      src: "https://suraherahman.com/suraherahman-2.jpg",
-      alt: "Surah Rahman – Arabic Page 2",
-      page: 2,
-    },
-    {
-      src: "https://suraherahman.com/suraherahman-3.jpg",
-      alt: "Surah Rahman – Arabic Page 3",
-      page: 3,
-    },
-  ]
+  // use root-relative paths (served from /public)
+const galleryImages = [
+  { src: "/suraherahman-1.jpg", alt: "Surah Rahman – Arabic Page 1", page: 1 },
+  { src: "/suraherahman-2.jpg", alt: "Surah Rahman – Arabic Page 2", page: 2 },
+  { src: "/suraherahman-3.jpg", alt: "Surah Rahman – Arabic Page 3", page: 3 },
+];
+
 
   return (
     <div className="min-h-screen flex flex-col">
