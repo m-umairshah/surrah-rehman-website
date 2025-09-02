@@ -20,7 +20,9 @@
   font-family: 'Noorehuda', sans-serif;
   font-size: 33px;  /* You can also use Tailwind utility: text-[33px] */
 }
-
+.urdu-font{
+font-size: 26px;
+}
 
 :root {
   /* Updated color tokens to match Islamic design brief */

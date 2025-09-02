@@ -118,7 +118,7 @@ export function AudioPlayer({ src, title, reciter, reciterImage, downloadUrl }: 
             />
           )}
           <div className="flex-1">
-            <h3 className="font-semibold text-lg text-balance">{title}</h3>
+            <h2 className="font-semibold text-lg text-balance">{title}</h2>
             <p className="text-muted-foreground">{reciter}</p>
           </div>
           {downloadUrl && (

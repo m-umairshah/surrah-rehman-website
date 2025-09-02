@@ -11,25 +11,18 @@ import Script from "next/script" // Correct way to include JSON-LD and Analytics
 export const metadata: Metadata = {
   metadataBase: new URL("https://suraherahman.com"),
   title: {
-    default: "Surah Rahman (Ar-Rahman) — Tilawat, MP3, Urdu & English Translation",
+    default: "Surah Rahman (Ar-Rahman) — MP3, Urdu & English Translation",
     template: "%s | Surah Rahman",
   },
   description:
-    "Read and listen to Surah Rahman (Ar-Rahman) online. Beautiful recitations by Qari Abdul Basit and Mishari Al-Afasi with Arabic text, Urdu & English translations, virtues and benefits.",
+    "Listen and read Surah Rahman online with Arabic text, Urdu & English translation. Recitations by Qari Abdul Basit & Mishari Al-Afasi, virtues & benefits.",
   keywords: [
     "surah rahman",
     "surah e rahman",
-    "surah rahman mp3",
-    "surah rahman tilawat",
+    "surah ar rahman mp3",
     "abdul basit",
     "mishari al-afasi",
-    "surah rahman english translation",
-    "surah rahman urdu translation",
-    "ar rahman",
-    "surah rahman arabic",
-    "surah rahman benefits",
-    "qari abdul basit surah rahman",
-    "mishari al-afasi surah rahman",
+    "english translation",    
   ],
   generator: "Surah Rahman Website",
   openGraph: {
@@ -40,7 +33,7 @@ export const metadata: Metadata = {
     title:
       "Surah Rahman (Ar-Rahman) — Audio Recitation, Urdu & English Translation",
     description:
-      "Listen to Surah Rahman with Qari Abdul Basit & Mishari Al-Afasi. Read Arabic with Urdu & English translations, virtues, and benefits.",
+      "Listen and read Surah Rahman online with Arabic text, Urdu & English translation. Recitations by Qari Abdul Basit & Mishari Al-Afasi, virtues & benefits.",
     images: [
       {
         url: "https://suraherahman.com/og-image.jpg",
@@ -55,7 +48,7 @@ export const metadata: Metadata = {
     title:
       "Surah Rahman (Ar-Rahman) — Listen & Read with Translation",
     description:
-      "Beautiful tilawat by Abdul Basit & Mishari Al-Afasi. Arabic with Urdu & English translations and benefits.",
+      "Listen and read Surah Rahman online with Arabic text, Urdu & English translation. Recitations by Qari Abdul Basit & Mishari Al-Afasi, virtues & benefits.",
     images: ["https://suraherahman.com/twitter-image.jpg"],
     site: "@suraherahman",
   },

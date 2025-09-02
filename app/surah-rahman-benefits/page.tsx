@@ -1,17 +1,17 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import type { Metadata } from "next"
-import { StructuredData } from "@/components/structured-data"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { StructuredData } from "@/components/structured-data";
 
 export const metadata: Metadata = {
-  title: "Surah Rahman Benefits - Spiritual Rewards and Blessings",
+  title: "Surah Rahman Benefits - Spiritual Blessings",
   description:
-    "Discover the incredible benefits and spiritual rewards of reciting Surah Rahman. Learn about the blessings, virtues, and positive effects of Chapter 55 of the Holy Quran.",
+    "Discover the virtues, blessings, and healing benefits of Surah Rahman (Chapter 55). Learn its rewards, spiritual effects, and power in the Holy Quran.",
   keywords:
-    "surah rahman benefits, quran benefits, islamic blessings, spiritual rewards, surah rahman virtues, quranic healing, islamic spirituality, quran recitation blessings, surah rahman virtues and rewards",
+    "Explore Surah Rahman benefits, Quranic healing, Islamic blessings, virtues, and spiritual rewards.",
   openGraph: {
     title: "Surah Rahman Benefits - Spiritual Rewards and Blessings",
     description:
@@ -32,9 +32,7 @@ export const metadata: Metadata = {
     title: "Surah Rahman Benefits - Spiritual Rewards and Blessings",
     description:
       "Discover the spiritual rewards and blessings of reciting Surah Rahman. Learn about the blessings, virtues, and positive effects of Chapter 55 of the Holy Quran.",
-    images: [
-      "https://suraherahman.com/surah-rahman-image.jpg",
-    ],
+    images: ["https://suraherahman.com/surah-rahman-image.jpg"],
   },
   robots: {
     index: true,
@@ -50,8 +48,7 @@ export const metadata: Metadata = {
   verification: {
     google: "Google_Search_Console_Verification_Code", // Replace with your actual verification code
   },
-
-}
+};
 
 export default function SurahRahmanBenefitsPage() {
   return (
@@ -62,21 +59,28 @@ export default function SurahRahmanBenefitsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold mb-4">Benefits of Surah Rahman</h1>
+              <h1 className="text-4xl font-bold mb-4">
+                Benefits of Surah Rahman
+              </h1>
               <p className="text-xl text-muted-foreground text-balance">
-                Discover the spiritual rewards and blessings of reciting the Chapter of the Most Merciful
+                Discover the spiritual rewards and blessings of reciting the
+                Chapter of the Most Merciful
               </p>
             </div>
 
             {/* Introduction */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle className="text-2xl text-center">The Chapter of Mercy</CardTitle>
+                <CardTitle className="text-2xl text-center">
+                  The Chapter of Mercy
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg text-center text-muted-foreground mb-6">
-                  Surah Rahman, known as "The Most Merciful," is a chapter that beautifully describes Allah's countless
-                  blessings and mercy. Reciting this blessed chapter brings numerous spiritual and worldly benefits.
+                  Surah Rahman, known as "The Most Merciful," is a chapter that
+                  beautifully describes Allah's countless blessings and mercy.
+                  Reciting this blessed chapter brings numerous spiritual and
+                  worldly benefits.
                 </p>
                 <div className="text-center">
                   <div className="inline-block bg-primary/10 rounded-lg p-4">
@@ -97,7 +101,7 @@ export default function SurahRahmanBenefitsPage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <span className="text-2xl">🤲</span>
-                    Spiritual Benefits
+                    <h2>Spiritual Benefits</h2>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -105,16 +109,17 @@ export default function SurahRahmanBenefitsPage() {
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Increased Faith (Iman):</strong>
+                        <h3><strong>Increased Faith (Iman):</strong></h3>
                         <p className="text-sm text-muted-foreground">
-                          Regular recitation strengthens belief and connection with Allah
+                          Regular recitation strengthens belief and connection
+                          with Allah
                         </p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Heart Purification:</strong>
+                        <h3><strong>Heart Purification:</strong></h3>
                         <p className="text-sm text-muted-foreground">
                           Cleanses the heart from negative thoughts and emotions
                         </p>
@@ -123,7 +128,7 @@ export default function SurahRahmanBenefitsPage() {
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Divine Protection:</strong>
+                        <h3><strong>Divine Protection:</strong></h3>
                         <p className="text-sm text-muted-foreground">
                           Provides spiritual protection from evil and harm
                         </p>
@@ -132,9 +137,10 @@ export default function SurahRahmanBenefitsPage() {
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Gratitude Enhancement:</strong>
+                        <h3><strong>Gratitude Enhancement:</strong></h3>
                         <p className="text-sm text-muted-foreground">
-                          Increases awareness and appreciation of Allah's blessings
+                          Increases awareness and appreciation of Allah's
+                          blessings
                         </p>
                       </div>
                     </li>
@@ -146,7 +152,7 @@ export default function SurahRahmanBenefitsPage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <span className="text-2xl">🌟</span>
-                    Worldly Benefits
+                    <h2>Worldly Benefits</h2>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -154,7 +160,7 @@ export default function SurahRahmanBenefitsPage() {
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Peace of Mind:</strong>
+                        <h3><strong>Peace of Mind:</strong></h3>
                         <p className="text-sm text-muted-foreground">
                           Brings tranquility and reduces anxiety and stress
                         </p>
@@ -163,16 +169,17 @@ export default function SurahRahmanBenefitsPage() {
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Healing Properties:</strong>
+                        <h3><strong>Healing Properties:</strong></h3>
                         <p className="text-sm text-muted-foreground">
-                          Believed to have therapeutic effects on physical and mental health
+                          Believed to have therapeutic effects on physical and
+                          mental health
                         </p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Barakah in Life:</strong>
+                        <h3><strong>Barakah in Life:</strong></h3>
                         <p className="text-sm text-muted-foreground">
                           Brings blessings and positive changes in daily life
                         </p>
@@ -181,8 +188,10 @@ export default function SurahRahmanBenefitsPage() {
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1">•</span>
                       <div>
-                        <strong>Better Sleep:</strong>
-                        <p className="text-sm text-muted-foreground">Reciting before sleep promotes peaceful rest</p>
+                        <h3><strong>Better Sleep:</strong></h3>
+                        <p className="text-sm text-muted-foreground">
+                          Reciting before sleep promotes peaceful rest
+                        </p>
                       </div>
                     </li>
                   </ul>
@@ -195,13 +204,19 @@ export default function SurahRahmanBenefitsPage() {
               <h2 className="text-2xl font-bold mb-4">Explore More</h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/surah-rahman-arabic">Read Surah Rahman Arabic</Link>
+                  <Link href="/surah-rahman-arabic">
+                    Read Surah Rahman Arabic
+                  </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/surah-rahman-english">Read Surah Rahman in English</Link>
+                  <Link href="/surah-rahman-english">
+                    Read Surah Rahman in English
+                  </Link>
                 </Button>
                 <Button asChild size="lg">
-                  <Link href="/surah-rahman-listen-online">Listen to Surah Rahman Online</Link>
+                  <Link href="/surah-rahman-listen-online">
+                    Listen to Surah Rahman Online
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -211,13 +226,19 @@ export default function SurahRahmanBenefitsPage() {
               <h3 className="text-2xl font-bold mb-6">Related Resources</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/surah-rahman-benefits">Surah Rahman Spiritual Benefits</Link>
+                  <Link href="/surah-rahman-benefits">
+                    Surah Rahman Spiritual Benefits
+                  </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/qari-abdul-basit">Listen to Qari Abdul Basit</Link>
+                  <Link href="/qari-abdul-basit">
+                    Listen to Qari Abdul Basit
+                  </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/mishari-al-afasi">Listen to Mishari al-Afasi</Link>
+                  <Link href="/mishari-al-afasi">
+                    Listen to Mishari al-Afasi
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -227,5 +248,5 @@ export default function SurahRahmanBenefitsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
