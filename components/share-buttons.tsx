@@ -56,7 +56,7 @@ export const ShareButtons = ({ url, title, description }: ShareButtonsProps) => 
 
   return (
     <div className="flex flex-wrap items-center gap-3 mb-6">
-      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Share this article:</span>
+      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Share this:</span>
       
       <div className="flex items-center gap-2">
         {/* Facebook */}

@@ -7,6 +7,7 @@ import {
   Globe,
   ArrowUpRight,
 } from "lucide-react";
+import { UniversalFooterShare } from "./universal-footer-share"
 
 export function Footer() {
   return (
@@ -30,34 +31,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="https://www.facebook.com/"
-              aria-label="Facebook"
-              className="rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition"
-            >
-              <Facebook className="h-5 w-5" />
-            </Link>
-            <Link
-              href="https://twitter.com/"
-              aria-label="Twitter / X"
-              className="rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition"
-            >
-              <Twitter className="h-5 w-5" />
-            </Link>
-            <Link
-              href="https://youtube.com/"
-              aria-label="YouTube"
-              className="rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition"
-            >
-              <Youtube className="h-5 w-5" />
-            </Link>
-            <Link
-              href="/contact-us"
-              aria-label="Email"
-              className="rounded-lg border border-white/10 bg-white/5 p-2 hover:bg-white/10 transition"
-            >
-              <Mail className="h-5 w-5" />
-            </Link>
+            <UniversalFooterShare />
           </div>
         </div>
 
