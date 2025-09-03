@@ -65,9 +65,9 @@ export function BlogCard({ post, showFullExcerpt = false }: BlogCardProps) {
           </div>
         )} */}
 
-        <Button asChild className="w-full">
+        {/* <Button asChild className="w-full">
           <Link href={`/blog/${post.slug}`}>Read More</Link>
-        </Button>
+        </Button> */}
       </CardContent>
     </Card>
   )
