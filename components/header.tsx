@@ -50,6 +50,7 @@ export function Header() {
       label: "Listen Online",
       icon: Headphones,
     },
+    { href: "/blog", label: "Blog", icon: FileText },
     { href: "/surah-rahman-read-online", label: "Read Online", icon: BookOpen },
     { href: "/surah-rahman-pdf", label: "PDF", icon: FileText },
   ];
