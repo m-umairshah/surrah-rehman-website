@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'Noorehuda';
-  src: url('/fonts/noorehuda-regular.ttf') format('truetype');
+  font-family: "Noorehuda";
+  src: url("/fonts/noorehuda-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* ✅ ensures text is visible immediately */
@@ -17,48 +17,48 @@
 }
 
 .font-arabic {
-  font-family: 'Noorehuda', sans-serif;
-  font-size: 33px;  /* You can also use Tailwind utility: text-[33px] */
+  font-family: "Noorehuda", sans-serif;
+  font-size: 33px; /* You can also use Tailwind utility: text-[33px] */
 }
-.urdu-font{
-font-size: 26px;
+.urdu-font {
+  font-size: 26px;
 }
 
 :root {
-  /* Updated color tokens to match Islamic design brief */
-  --background: oklch(1 0 0); /* White */
-  --foreground: oklch(0.4 0 0); /* Dark Gray #4b5563 */
-  --card: oklch(0.98 0 0); /* Light Gray #f9fafb */
-  --card-foreground: oklch(0.3 0 0); /* Darker Gray #374151 */
-  --popover: oklch(1 0 0); /* White */
-  --popover-foreground: oklch(0.4 0 0); /* Dark Gray */
-  --primary: oklch(0.55 0.15 200); /* Cyan #0891b2 */
-  --primary-foreground: oklch(1 0 0); /* White */
-  --secondary: oklch(0.6 0.2 260); /* Blue #6366f1 */
-  --secondary-foreground: oklch(1 0 0); /* White */
-  --muted: oklch(0.99 0.02 120); /* Very light green #f0fdf4 */
-  --muted-foreground: oklch(0.3 0 0); /* Dark Gray */
-  --accent: oklch(0.6 0.2 260); /* Blue accent #6366f1 */
-  --accent-foreground: oklch(1 0 0); /* White */
+  /* Updated color tokens to match Islamic blog design brief */
+  --background: oklch(1 0 0); /* White #ffffff */
+  --foreground: oklch(0.45 0.02 240); /* Slate Gray #475569 */
+  --card: oklch(1 0 0); /* White #ffffff */
+  --card-foreground: oklch(0.25 0.05 200); /* Cyan-800 #164e63 */
+  --popover: oklch(0.97 0.02 200); /* Light Cyan #ecfeff */
+  --popover-foreground: oklch(0.25 0.05 200); /* Cyan-800 #164e63 */
+  --primary: oklch(0.25 0.05 200); /* Cyan-800 #164e63 */
+  --primary-foreground: oklch(1 0 0); /* White #ffffff */
+  --secondary: oklch(0.6 0.15 160); /* Emerald-500 #10b981 */
+  --secondary-foreground: oklch(1 0 0); /* White #ffffff */
+  --muted: oklch(0.96 0.01 240); /* Slate-100 #f1f5f9 */
+  --muted-foreground: oklch(0.45 0.02 240); /* Slate Gray #475569 */
+  --accent: oklch(0.6 0.15 160); /* Emerald-500 #10b981 */
+  --accent-foreground: oklch(1 0 0); /* White #ffffff */
   --destructive: oklch(0.55 0.25 25); /* Red #dc2626 */
-  --destructive-foreground: oklch(1 0 0); /* White */
-  --border: oklch(0.9 0 0); /* Light border #e5e7eb */
-  --input: oklch(0.98 0 0); /* Light input background */
-  --ring: oklch(0.4 0 0 / 0.1); /* Ring with opacity */
-  --chart-1: oklch(0.6 0.2 260);
-  --chart-2: oklch(0.7 0.25 120);
-  --chart-3: oklch(0.5 0.2 140);
-  --chart-4: oklch(0.75 0.2 80);
-  --chart-5: oklch(0.55 0.25 25);
+  --destructive-foreground: oklch(1 0 0); /* White #ffffff */
+  --border: oklch(0.97 0.02 200); /* Light Cyan #ecfeff */
+  --input: oklch(0.96 0.01 240); /* Slate-100 #f1f5f9 */
+  --ring: oklch(0.6 0.15 160 / 0.5); /* Emerald ring with opacity */
+  --chart-1: oklch(0.3 0.15 260); /* Blue #1e3a8a */
+  --chart-2: oklch(0.45 0.2 260); /* Indigo #4f46e5 */
+  --chart-3: oklch(0.5 0.25 300); /* Purple #9333ea */
+  --chart-4: oklch(0.65 0.2 80); /* Amber #f59e0b */
+  --chart-5: oklch(0.55 0.25 25); /* Red #dc2626 */
   --radius: 0.5rem;
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.4 0 0);
-  --sidebar-primary: oklch(1 0 0);
-  --sidebar-primary-foreground: oklch(0.3 0 0);
-  --sidebar-accent: oklch(0.6 0.2 260);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.4 0 0 / 0.1);
+  --sidebar: oklch(0.97 0.02 200); /* Light Cyan #ecfeff */
+  --sidebar-foreground: oklch(0.25 0.05 200); /* Cyan-800 #164e63 */
+  --sidebar-primary: oklch(0.6 0.15 160); /* Emerald-500 #10b981 */
+  --sidebar-primary-foreground: oklch(1 0 0); /* White #ffffff */
+  --sidebar-accent: oklch(0.55 0.15 160); /* Emerald-600 #059669 */
+  --sidebar-accent-foreground: oklch(1 0 0); /* White #ffffff */
+  --sidebar-border: oklch(0.97 0.02 200); /* Light Cyan #ecfeff */
+  --sidebar-ring: oklch(0.6 0.15 160 / 0.5); /* Emerald ring with opacity */
 }
 
 .dark {
@@ -68,7 +68,7 @@ font-size: 26px;
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.1 0 0);
   --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.6 0.15 200);
+  --primary: oklch(0.35 0.05 200);
   --primary-foreground: oklch(0.1 0 0);
   --secondary: oklch(0.25 0 0);
   --secondary-foreground: oklch(0.95 0 0);
