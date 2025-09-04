@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { SurahFull } from "@/components/surah-full"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,6 +29,143 @@ export const metadata: Metadata = {
     ],
   },
 };
+// Updated Arabic verses
+const arabicVerses = [
+    { number: 1, arabic: "اَلرَّحۡمٰنُ ۙ" },
+    { number: 2, arabic: "عَلَّمَ الۡقُرۡاٰنَ ؕ" },
+    { number: 3, arabic: "خَلَقَ الۡاِنۡسَانَ ۙ" },
+    { number: 4, arabic: "عَلَّمَہُ الۡبَیَانَ" },
+    { number: 5, arabic: "اَلشَّمۡسُ وَ الۡقَمَرُ بِحُسۡبَانٍ" },
+    { number: 6, arabic: "وَّ النَّجۡمُ وَ الشَّجَرُ یَسۡجُدٰنِ" },
+    { number: 7, arabic: "وَ السَّمَآءَ رَفَعَہَا وَ وَضَعَ الۡمِیۡزَانَ ۙ" },
+    { number: 8, arabic: "اَلَّا تَطۡغَوۡا فِی الۡمِیۡزَانِ" },
+    {
+      number: 9,
+      arabic:
+        "وَ اَقِیۡمُوا الۡوَزۡنَ بِالۡقِسۡطِ وَ لَا تُخۡسِرُوا الۡمِیۡزَانَ",
+    },
+    { number: 10, arabic: "وَ الۡاَرۡضَ وَضَعَہَا لِلۡاَنَامِ" },
+    {
+      number: 11,
+      arabic: "فِیۡہَا فَاکِہَۃٌ ۪ۙ وَّ النَّخۡلُ ذَاتُ الۡاَکۡمَامِ",
+    },
+    { number: 12, arabic: "وَ الۡحَبُّ ذُو الۡعَصۡفِ وَ الرَّیۡحَانُ" },
+    { number: 13, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 14, arabic: "خَلَقَ الۡاِنۡسَانَ مِنۡ صَلۡصَالٍ کَالۡفَخَّارِ" },
+    { number: 15, arabic: "وَ خَلَقَ الۡجَآنَّ مِنۡ مَّارِجٍ مِّنۡ نَّارٍ" },
+    { number: 16, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 17, arabic: "رَبُّ الۡمَشۡرِقَیۡنِ وَ رَبُّ الۡمَغۡرِبَیۡنِ" },
+    { number: 18, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 19, arabic: "مَرَجَ الۡبَحۡرَیۡنِ یَلۡتَقِیٰنِ" },
+    { number: 20, arabic: "بَیۡنَہُمَا بَرۡزَخٌ لَّا یَبۡغِیٰنِ" },
+    { number: 21, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 22, arabic: "یَخۡرُجُ مِنۡہُمَا اللُّؤۡلُؤُ وَ الۡمَرۡجَانُ" },
+    { number: 23, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 24,
+      arabic: "وَ لَہُ الۡجَوَارِ الۡمُنۡشَئٰتُ فِی الۡبَحۡرِ کَالۡاَعۡلَامِ",
+    },
+    { number: 25, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 26, arabic: "کُلُّ مَنۡ عَلَیۡہَا فَانٍ" },
+    {
+      number: 27,
+      arabic: "وَّ یَبۡقٰی وَجۡہُ رَبِّکَ ذُو الۡجَلٰلِ وَ الۡاِکۡرَامِ",
+    },
+    { number: 28, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 29,
+      arabic:
+        "یَسۡـَٔلُہٗ مَنۡ فِی السَّمٰوٰتِ وَ الۡاَرۡضِ ؕ کُلَّ یَوۡمٍ ہُوَ فِیۡ شَاۡنٍ",
+    },
+    { number: 30, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 31, arabic: "سَنَفۡرُغُ لَکُمۡ اَیُّہَ الثَّقَلٰنِ" },
+    { number: 32, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 33,
+      arabic:
+        "یٰمَعۡشَرَ الۡجِنِّ وَ الۡاِنۡسِ اِنِ اسۡتَطَعۡتُمۡ اَنۡ تَنۡفُذُوۡا مِنۡ اَقۡطَارِ السَّمٰوٰتِ وَ الۡاَرۡضِ فَانۡفُذُوۡا ؕ لَا تَنۡفُذُوۡنَ اِلَّا بِسُلۡطٰنٍ",
+    },
+    { number: 34, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 35,
+      arabic:
+        "یُرۡسَلُ عَلَیۡکُمَا شُوَاظٌ مِّنۡ نَّارٍ ۬ۙ وَّ نُحَاسٌ فَلَا تَنۡتَصِرٰنِ",
+    },
+    { number: 36, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 37,
+      arabic: "فَاِذَا انۡشَقَّتِ السَّمَآءُ فَکَانَتۡ وَرۡدَۃً کَالدِّہَانِ",
+    },
+    { number: 38, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 39,
+      arabic:
+        "فَیَوۡمَئِذٍ لَّا یُسۡـَٔلُ عَنۡ ذَنۡۢبِہٖۤ اِنۡسٌ وَّ لَا جَآنٌّ",
+    },
+    { number: 40, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 41,
+      arabic:
+        "یُعۡرَفُ الۡمُجۡرِمُوۡنَ بِسِیۡمٰہُمۡ فَیُؤۡخَذُ بِالنَّوَاصِیۡ وَ الۡاَقۡدَامِ",
+    },
+    { number: 42, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 43,
+      arabic: "ہٰذِہٖ جَہَنَّمُ الَّتِیۡ یُکَذِّبُ بِہَا الۡمُجۡرِمُوۡنَ",
+    },
+    { number: 44, arabic: "یَطُوۡفُوۡنَ بَیۡنَہَا وَ بَیۡنَ حَمِیۡمٍ اٰنٍ" },
+    { number: 45, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 46, arabic: "وَ لِمَنۡ خَافَ مَقَامَ رَبِّہٖ جَنَّتٰنِ" },
+    { number: 47, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 48, arabic: "ذَوَاتَاۤ اَفۡنَانٍ" },
+    { number: 49, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 50, arabic: "فِیۡہِمَا عَیۡنٰنِ تَجۡرِیٰنِ" },
+    { number: 51, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 52, arabic: "فِیۡہِمَا مِنۡ کُلِّ فَاکِہَۃٍ زَوۡجٰنِ" },
+    { number: 53, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 54,
+      arabic:
+        "مُتَّکِـِٕیۡنَ عَلٰی فُرُشٍۭ بَطَآئِنُہَا مِنۡ اِسۡتَبۡرَقٍ ؕ وَ جَنَا الۡجَنَّتَیۡنِ دَانٍ",
+    },
+    { number: 55, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 56,
+      arabic:
+        "فِیۡہِنَّ قٰصِرٰتُ الطَّرۡفِ ۙ لَمۡ یَطۡمِثۡہُنَّ اِنۡسٌ قَبۡلَہُمۡ وَ لَا جَآنٌّ",
+    },
+    { number: 57, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 58, arabic: "کَاَنَّہُنَّ الۡیَاقُوۡتُ وَ الۡمَرۡجَانُ" },
+    { number: 59, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 60, arabic: "ہَلۡ جَزَآءُ الۡاِحۡسَانِ اِلَّا الۡاِحۡسَانُ" },
+    { number: 61, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 62, arabic: "وَ مِنۡ دُوۡنِہِمَا جَنَّتٰنِ" },
+    { number: 63, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 64, arabic: "مُدۡہَآ مَّتٰنِ" },
+    { number: 65, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 66, arabic: "فِیۡہِمَا عَیۡنٰنِ نَضَّاخَتٰنِ" },
+    { number: 67, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 68, arabic: "فِیۡہِمَا فَاکِہَۃٌ وَّ نَخۡلٌ وَّ رُمَّانٌ" },
+    { number: 69, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 70, arabic: "فِیۡہِنَّ خَیۡرٰتٌ حِسَانٌ" },
+    { number: 71, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    { number: 72, arabic: "حُوۡرٌ مَّقۡصُوۡرٰتٌ فِی الۡخِیَامِ" },
+    { number: 73, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 74,
+      arabic: "لَمۡ یَطۡمِثۡہُنَّ اِنۡسٌ قَبۡلَہُمۡ وَ لَا جَآنٌّ",
+    },
+    { number: 75, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 76,
+      arabic: "مُتَّکِـِٕیۡنَ عَلٰی رَفۡرَفٍ خُضۡرٍ وَّ عَبۡقَرِیٍّ حِسَانٍ",
+    },
+    { number: 77, arabic: "فَبِاَیِّ اٰلَآءِ رَبِّکُمَا تُکَذِّبٰنِ" },
+    {
+      number: 78,
+      arabic: "تَبٰرَکَ اسۡمُ رَبِّکَ ذِی الۡجَلٰلِ وَ الۡاِکۡرَامِ",
+    },
+  ];
 
 export default function SurahRahmanReadOnlinePage() {
   return (
@@ -100,6 +238,35 @@ export default function SurahRahmanReadOnlinePage() {
                 </CardContent>
               </Card>
             </div>
+
+            <SurahFull verses={arabicVerses} />
+
+            {/* Surah Rahman Description */}
+            <div className="text-center mb-12 mt-12">
+              <Card className="p-8">
+                <h2 className="text-3xl font-bold mb-4">About Surah Rahman</h2>
+                <p className="text-lg text-muted-foreground text-balance mb-6">
+                  Surah Rahman is the 55th chapter of the Holy Quran, consisting
+                  of 78 verses. Known as "The Most Merciful," it beautifully
+                  describes Allah's countless blessings and mercy upon His
+                  creation. The chapter repeatedly asks "Which of the favors of
+                  your Lord would you deny?" emphasizing gratitude for divine
+                  blessings.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <strong>Chapter:</strong> 55
+                  </div>
+                  <div>
+                    <strong>Verses:</strong> 78
+                  </div>
+                  <div>
+                    <strong>Type:</strong> Meccan
+                  </div>
+                </div>
+              </Card>
+            </div>
+
             {/* --- Surah Rahman Detailed Articles --- */}
             <section className="max-w-4xl mx-auto mt-12 mb-12 space-y-12">
               {/* Arabic */}
@@ -214,32 +381,7 @@ export default function SurahRahmanReadOnlinePage() {
                 </p>
               </article>
             </section>
-            {/* Surah Rahman Description */}
-            <div className="text-center mb-12">
-              <Card className="p-8">
-                <h2 className="text-3xl font-bold mb-4">About Surah Rahman</h2>
-                <p className="text-lg text-muted-foreground text-balance mb-6">
-                  Surah Rahman is the 55th chapter of the Holy Quran, consisting
-                  of 78 verses. Known as "The Most Merciful," it beautifully
-                  describes Allah's countless blessings and mercy upon His
-                  creation. The chapter repeatedly asks "Which of the favors of
-                  your Lord would you deny?" emphasizing gratitude for divine
-                  blessings.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <div>
-                    <strong>Chapter:</strong> 55
-                  </div>
-                  <div>
-                    <strong>Verses:</strong> 78
-                  </div>
-                  <div>
-                    <strong>Type:</strong> Meccan
-                  </div>
-                </div>
-              </Card>
-            </div>
-
+            
             {/* Related Content */}
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-6">
