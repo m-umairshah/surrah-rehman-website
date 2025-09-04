@@ -7,11 +7,11 @@ import { SurahFull } from "@/components/surah-full"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Read Surah Rahman online with Arabic",
+  title: "Read Surah Ar Rahman online with Arabic",
   description:
-    "Read Surah Rahman online with Arabic text, Urdu and English translations. Explore virtues, benefits, and recitations to experience the beauty of Chapter 55.",
+    "Read Surah Ar Rahman online with Urdu and English translations. Explore benefits, and recitations to experience the beauty of Surrah al rahman online.",
   keywords:
-    "read surah rahman online, surah ar rahman arabic, english, urdu, islamic translations, read in pdf",
+    "read surah rahman online, surah ar rahman arabic, english, urdu, islamic translations, read in pdf",
 
   openGraph: {
     title: "Read Surah Rahman Online - Arabic, Urdu & English Translations",
@@ -177,10 +177,10 @@ export default function SurahRahmanReadOnlinePage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold mb-4">
-                Read Surah Rahman Online
+                Read Surah Ar-Rahman Online
               </h1>
               <p className="text-xl text-muted-foreground text-balance">
-                Choose your preferred language to read the complete Surah Rahman
+                Choose your preferred language to read the Surah al Rahman Online
               </p>
             </div>
             

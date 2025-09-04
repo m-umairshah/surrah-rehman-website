@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://suraherahman.com"),
   title: {
     default: "Surah Rahman (Ar-Rahman) — MP3, Urdu & English Translation",
-    template: "%s | Surah Rahman",
+    template: "%s | Surah Al Rahman",
   },
   description:
     "Listen and read Surah Rahman online with Arabic text, Urdu & English translation. Recitations by Qari Abdul Basit & Mishari Al-Afasi, virtues & benefits.",
