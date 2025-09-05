@@ -198,7 +198,7 @@ export default function SurahRahmanUrduPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/sheikh-mishari-al-afasi" className="underline">
+                  <Link href="/mishari-al-afasi" className="underline">
                     Sheikh Mishari Rashid Al-Afasi — Recitations
                   </Link>
                 </li>
