@@ -7,7 +7,7 @@ import type { Metadata } from "next"
 import { StructuredData } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Surah Rahman English Translation - Chapter 55 of the Quran",
+  title: "Surah Rahman English Translation",
   description:
     "Read Surah Rahman in English translation. Complete Chapter 55 of the Holy Quran with verse-by-verse English translation and meaning.",
   keywords:
