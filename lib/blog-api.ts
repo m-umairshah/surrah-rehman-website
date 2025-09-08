@@ -224,7 +224,7 @@ export async function getAllPostSlugsOptimized(): Promise<string[]> {
       const url = `${BLOG_API_BASE}/posts?per_page=${postsPerPage}&page=${currentPage}&fields=slug`
       
       const response = await fetch(url, {
-        next: { revalidate: 300 },
+        next: { revalidate: 300 }, 
       })
 
       if (!response.ok) {
